@@ -17,14 +17,6 @@
     <title>Water - Generalization</title>
 </head>
 <body>
-    <script>
-        $(document).ready(function() {
-        $('div.container-fluid').height($(window).height());
-        });
-        $(window).resize(function() {
-        $('div.container-fluid').height($(window).height());
-        });
-    </script>
 
     <div class = "container-fluid">
         <div class="row bg">
@@ -62,4 +54,15 @@
     </div>
 
 </body>
+
+<script>
+        $(document).ready(function() {
+            $('div.container-fluid').height($(window).height());
+        });
+        
+        $(window).resize(function() {
+            $('div.container-fluid').height($(window).height());
+        });
+    </script>
+
 </html>
