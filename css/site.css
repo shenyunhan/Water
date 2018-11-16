@@ -1,7 +1,13 @@
-#index-bg
+.index-bg
 {
     background-image: url(../images/index-bg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.index-link
+{
+    cursor: pointer !important;
+    height: 100%;
 }

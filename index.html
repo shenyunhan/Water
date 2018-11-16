@@ -18,30 +18,33 @@
 
     <title>Water - Home</title>
 </head>
-<body id = "index-bg">
 
-    <script>
-        $(document).ready(function() {
-            $("div.container-fluid").height($(window).height());
-            $("body").ripples({})
-        });
-
-        $(window).resize(function() {
-            $("div.container-fluid").height($(window).height());
-        });
-
-        $("body").ripples();
-    </script>
-
-    <div class = "container-fluid">
-        <div class = "row justify-content-center"
-            style = "cursor: pointer; height: 100%;"
-            onclick = "window.location='#'">
-            <div class = "col-4 align-self-center">
-                <h1 style = "text-align: center; color: lightblue"><strong>Water</strong></h1>
+<body>
+    <div id="index-bg" class="container-fluid index-bg">
+        <div id="index-link" class="row index-link">
+            <div class="col align-self-center text-center">
+                <h1 style="text-align: center; color: lightblue"><strong>Water</strong></h1>
             </div>
         </div>
     </div>
 
 </body>
+
+<script>
+    $(document).ready(function() {
+        $('div.container-fluid').height($(window).height());
+        $('#index-bg').ripples({
+            resolution: 512,
+            perturbance: 0.1
+        });
+
+        $('#index-link').click(function () {
+            window.location = '#';
+        });
+    });
+
+    $(window).resize(function() {
+        $('div.container-fluid').height($(window).height());
+    });
+</script>
 </html>
