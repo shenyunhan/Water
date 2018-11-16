@@ -18,15 +18,13 @@
 </head>
 <body>
     <script>
-            $(document).ready(function() {
-                $("div.container-fluid").height($(window).height());
-                $("body").ripples();
-            });
-    
-            $(window).resize(function() {
-                $("div.container-fluid").height($(window).height());
-            });
-        </script>
+        $(document).ready(function() {
+        $('div.container-fluid').height($(window).height());
+        });
+        $(window).resize(function() {
+        $('div.container-fluid').height($(window).height());
+        });
+    </script>
 
     <div class = "container-fluid">
         <div class="row bg">
@@ -35,13 +33,28 @@
             <div class="col-4 nav-right">
                 <div class="row">
                     <div class="col-2"></div>
-                    <div><h1 class="nav-generalization">Water</h1></div>
-                    <img class="icon">
+                    <div class="nav-title1">
+                        <p id="title1">Water</p>
+                    </div>
+                    <img class="icon-menu">
                 </div>
-                <div class="w-100"></div>
+            <hr>
                 <div class="row">
-                    <div style="margin:0 auto; background-color:black">try</div>
+                    <div class="col-4"></div>
+                    <div class="nav-title2">
+                        <p id = "title2">水资源的认识</p>
+                    </div>
                 </div>
+                <div class="row">
+                        <div class="col-6"></div>
+                        <div class="nav-title3">
+                            <p id = "title3">了解更多</p>
+                            <img class="icon-arrow">
+                        </div>
+                </div>
+                <div class="row shade">
+                    <div class="col-7"></div>
+                    <div class="col-4" id="shade1"></div>
                 </div>
             </div>
             <div class="col-2"></div>
