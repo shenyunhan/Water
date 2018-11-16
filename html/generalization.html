@@ -20,49 +20,81 @@
 
     <div class = "container-fluid">
         <div class="row bg">
-            <div class="col-2"></div>
+            <div class="col-2 left-right">
+                <img src="../images/icon-left-grey.png">
+            </div>
             <div class="col-4" id="generalization-bg"></div>
             <div class="col-4 nav-right">
                 <div class="row">
                     <div class="col-2"></div>
-                    <div class="nav-title1">
-                        <p id="title1">Water</p>
+                    <div class="nav-title1 col-8">
+                        <p id="nav-title1-1">Water</p>
                     </div>
-                    <img class="icon-menu">
+                    <div class="col-2 icon-menu">
+                        <img src="../images/icon-menu.png">
+                    </div>
                 </div>
             <hr>
                 <div class="row">
                     <div class="col-4"></div>
-                    <div class="nav-title2">
-                        <p id = "title2">水资源的认识</p>
+                    <div class="nav-title2 col-8">
+                        <p id = "nav-title2-1">水资源的认识</p>
                     </div>
                 </div>
                 <div class="row">
                         <div class="col-6"></div>
-                        <div class="nav-title3">
-                            <p id = "title3">了解更多</p>
-                            <img class="icon-arrow">
+                        <div class="nav-title3 col-6 row">
+                            <p id = "nav-title3-1">了解更多</p>
+                            <img class="icon-arrow" src="../images/arrow.png">
                         </div>
                 </div>
                 <div class="row shade">
                     <div class="col-7"></div>
                     <div class="col-4" id="shade1"></div>
+                    <div class="col-1"></div>
                 </div>
             </div>
-            <div class="col-2"></div>
+            <div class="col-2 left-right">
+                <img src="../images/icon-right-grey.png" >
+            </div>
         </div>
     </div>
 
 </body>
 
 <script>
-        $(document).ready(function() {
-            $('div.container-fluid').height($(window).height());
-        });
+    $(document).ready(function() {
+        $('div.container-fluid').height($(window).height());
+
+        var hdwidth = document.getElementsByClassName("nav-title2")[0].getBoundingClientRect().width;
+        var scale = hdwidth / 10;
+        document.getElementById("nav-title2-1").style.fontSize = scale + "px";
+
+        hdwidth = document.getElementsByClassName("nav-title1")[0].getBoundingClientRect().width;
+        scale = hdwidth /3.5;
+        document.getElementById("nav-title1-1").style.fontSize = scale + "px";
+
+        hdwidth = document.getElementsByClassName("nav-title3")[0].getBoundingClientRect().width;
+        scale = hdwidth /12;
+        document.getElementById("nav-title3-1").style.fontSize = scale + "px";
+        document.getElementById("nav-title3-1").style.letterSpacing = (scale / 30) + "em";
+    });
+    $(window).resize(function() {
+        $('div.container-fluid').height($(window).height());
         
-        $(window).resize(function() {
-            $('div.container-fluid').height($(window).height());
-        });
-    </script>
+        var hdwidth = document.getElementsByClassName("nav-title2")[0].getBoundingClientRect().width;
+        var scale = hdwidth / 10;
+        document.getElementById("nav-title2-1").style.fontSize = scale + "px";
+
+        hdwidth = document.getElementsByClassName("nav-title1")[0].getBoundingClientRect().width;
+        scale = hdwidth /3.5;
+        document.getElementById("nav-title1-1").style.fontSize = scale + "px";
+
+        hdwidth = document.getElementsByClassName("nav-title3")[0].getBoundingClientRect().width;
+        scale = hdwidth /12;
+        document.getElementById("nav-title3-1").style.fontSize = scale + "px";
+        document.getElementById("nav-title3-1").style.letterSpacing = (scale / 30) + "em";
+    });
+</script>
 
 </html>
