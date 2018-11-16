@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="../css/site.css"/>
+    <title>Water - Generalization</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function() {
+        $('div.container-fluid').height($(window).height());
+        });
+        $(window).resize(function() {
+        $('div.container-fluid').height($(window).height());
+        });
+    </script>
+
+    <div class = "container-fluid">
+        <div class="row bg">
+            <div class="col-2"></div>
+            <div class="col-4" id="generalization-bg"></div>
+            <div class="col-4 nav-right">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="nav-title1">
+                        <p id="title1">Water</p>
+                    </div>
+                    <img class="icon-menu">
+                </div>
+            <hr>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="nav-title2">
+                        <p id = "title2">水资源的认识</p>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-6"></div>
+                        <div class="nav-title3">
+                            <p id = "title3">了解更多</p>
+                            <img class="icon-arrow">
+                        </div>
+                </div>
+                <div class="row shade">
+                    <div class="col-7"></div>
+                    <div class="col-4" id="shade1"></div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+</body>
+</html>
