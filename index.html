@@ -17,19 +17,21 @@
 
     <title>Water - Home</title>
 </head>
-<body id = "index">
+<body id = "index-bg">
 
     <script>
         $(document).ready(function() {
-            $("div.row.justify-content-center").height($(window).height());
+            $("div.container-fluid").height($(window).height());
         });
         $(window).resize(function() {
-            $("div.row.justify-content-center").height($(window).height());
+            $("div.container-fluid").height($(window).height());
         });
     </script>
 
     <div class = "container-fluid">
-        <div class = "row justify-content-center">
+        <div class = "row justify-content-center"
+            style = "cursor: pointer; height: 100%;"
+            onclick = "window.location='#'">
             <div class = "col-4 align-self-center">
                 <h1 style = "text-align: center; color: lightblue"><strong>Water</strong></h1>
             </div>
