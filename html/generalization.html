@@ -18,45 +18,49 @@
     <title>Water - Generalization</title>
 </head>
 <body>
-
     <div class = "container-fluid">
         <div class="row bg">
             <div class="col-2 left-right">
-                <img src="../images/icon-left-grey.png">
+                <img src="../images/icon-left-grey.png" id="left-right-1">
             </div>
-            <div id="generalization-bg" class="col-4 generalization-bg"></div>
+            <div id="generalization-bg" class="col-4 generalization-bg">
+                <!-- <div>
+                <img src="../images/icon-left-grey.gif" id="left-right-1" style="margin-top:65%;background-color:rgba(255, 255, 255, 0.4);">
+                </div>     -->
+            </div>
             <div class="col-4 nav-right">
                 <div class="row">
-                    <div class="col-2"></div>
-                    <div class="nav-title1 col-8">
+                    <div class="col-1"></div>
+                    <div class="nav-title1 col-11 row">
                         <p id="nav-title1-1">Water</p>
-                    </div>
-                    <div class="col-2 icon-menu">
-                        <img src="../images/icon-menu.png">
+                        <img src="../images/icon-menu.png" id="icon-menu">
                     </div>
                 </div>
                 <hr/>
                 <div class="row">
-                    <div class="col-4"></div>
-                    <div class="nav-title2 col-8">
+                    <div class="col-2"></div>
+                    <div class="nav-title2 col-10 row">
+                        <!-- <div class="col-9"> -->
                         <p id = "nav-title2-1">水资源的认识</p>
+                        <!-- </div> -->
+                        <!-- <div class="col-3">
+                        <img src="../images/icon-right-grey.png" id="left-right-2">
+                        </div> -->
                     </div>
                 </div>
                 <div class="row">
-                        <div class="col-6"></div>
-                        <div class="nav-title3 col-6 row">
-                            <p id = "nav-title3-1">了解更多</p>
-                            <img class="icon-arrow" src="../images/arrow.png">
+                        <div class="col-4"></div>
+                        <div class="col-5 block-link" id="more">
+                            <div class="nav-title3 row">
+                                <span id = "nav-title3-1">了解更多</span>
+                                <img id="icon-arrow" src="../images/arrow.png" >
+                            </div>
                         </div>
-                </div>
-                <div class="row shade">
-                    <div class="col-7"></div>
-                    <div class="col-4 block-link" id="shade1"></div>
-                    <div class="col-1"></div>
+                        <div class="col-3"></div>
                 </div>
             </div>
             <div class="col-2 left-right">
-                <img src="../images/icon-right-grey.png" >
+                <img src="../images/icon-right-grey.png" id="left-right-2">
             </div>
         </div>
     </div>
@@ -64,21 +68,34 @@
 </body>
 
 <script>
+    function changesize_text(idname, rate)
+    {
+        var scale = $(window).width() / rate;
+        document.getElementById(idname).style.fontSize = scale + 'em';
+
+    }
+
+    function changesize_img(idname, w, h)
+    {
+        var width = ($(window).width() / w) + 'px';
+        var height = ($(window).height() / h) + 'px';
+        var id = '#' + idname;
+        $(id).css({"width":width,"height":height});
+    }
+
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
 
-        var hdwidth = document.getElementsByClassName('nav-title2')[0].getBoundingClientRect().width;
-        var scale = hdwidth / 10;
-        document.getElementById('nav-title2-1').style.fontSize = scale + 'px';
+        changesize_text('nav-title2-1', 650);
+        changesize_text('nav-title1-1', 1500);
+        changesize_text('nav-title3-1', 1200);
+        document.getElementById('nav-title3-1').style.letterSpacing = $(window).width() / 6000 + 'em';
+        
+        changesize_img('left-right-1', 17, 8);
+        changesize_img('left-right-2', 17, 8);
+        changesize_img('icon-menu', 25, 15);
+        changesize_img('icon-arrow', 23, 16);
 
-        hdwidth = document.getElementsByClassName('nav-title1')[0].getBoundingClientRect().width;
-        scale = hdwidth /3.5;
-        document.getElementById('nav-title1-1').style.fontSize = scale + 'px';
-
-        hdwidth = document.getElementsByClassName('nav-title3')[0].getBoundingClientRect().width;
-        scale = hdwidth /12;
-        document.getElementById('nav-title3-1').style.fontSize = scale + 'px';
-        document.getElementById('nav-title3-1').style.letterSpacing = (scale / 30) + 'em';
 
         $('#shade1').click(function() {
             window.location = 'intro.html';
@@ -92,18 +109,15 @@
     $(window).resize(function() {
         $('div.container-fluid').height($(window).height());
         
-        var hdwidth = document.getElementsByClassName('nav-title2')[0].getBoundingClientRect().width;
-        var scale = hdwidth / 10;
-        document.getElementById('nav-title2-1').style.fontSize = scale + 'px';
-
-        hdwidth = document.getElementsByClassName('nav-title1')[0].getBoundingClientRect().width;
-        scale = hdwidth /3.5;
-        document.getElementById('nav-title1-1').style.fontSize = scale + 'px';
-
-        hdwidth = document.getElementsByClassName('nav-title3')[0].getBoundingClientRect().width;
-        scale = hdwidth /12;
-        document.getElementById('nav-title3-1').style.fontSize = scale + 'px';
-        document.getElementById('nav-title3-1').style.letterSpacing = (scale / 30) + 'em';
+        changesize_text('nav-title2-1', 650);
+        changesize_text('nav-title1-1', 1500);
+        changesize_text('nav-title3-1', 1200);
+        document.getElementById('nav-title3-1').style.letterSpacing = $(window).width() / 6000 + 'em';
+        
+        changesize_img('left-right-1', 17, 8);
+        changesize_img('left-right-2', 17, 8);
+        changesize_img('icon-menu', 25, 15);
+        changesize_img('icon-arrow', 23, 16);
     });
 </script>
 
