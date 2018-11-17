@@ -22,8 +22,8 @@
 <body>
     <div id="index-bg" class="container-fluid index-bg" >
         <div id="index-link" class="row index-link" style="background-color:rgba(187,219,253,0.3);">
-            <div class="col align-self-center text-center">
-                <h1 style="text-align: center; color: lightblue"><strong>Water</strong></h1>
+            <div class="col align-self-center text-center huge-title">
+                Water
             </div>
         </div>
     </div>
@@ -45,15 +45,21 @@
             var r = 20;
             var s = 0.04 + Math.random() * 0.08;
             $el.ripples('drop', x, y, r, s);
-        }, 500);
+        }, 1000);
 
         $('#index-link').click(function () {
             window.location = '#';
         });
+
+        var scale = $(window).width() / 15;
+        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
     });
 
     $(window).resize(function() {
         $('div.container-fluid').height($(window).height());
+        
+        var scale = $(window).width() / 15;
+        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
     });
 </script>
 

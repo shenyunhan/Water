@@ -191,14 +191,13 @@
     padding-left: 10%;
 }
 
-.header
+.title-sheet
 {
-    font-size: 50px;
     font-weight: 900;
     background-color: pink;
 }
 
-.text-sheet
+.content-sheet
 {
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -215,4 +214,11 @@
     align-self:center;
     /* display: flex;
     justify-content:center; */
+}
+
+.huge-title
+{
+    font-weight: 600;
+    color: white;
+    text-align: center;
 }
