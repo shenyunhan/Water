@@ -22,7 +22,7 @@
 <body>
     <div class="container-fluid index-bg" id="status-bg">
         <div class="row">
-            <div class="col-auto offset-1 huge-title">
+            <div class="col-auto offset-1 huge-title" id="huge-title-intro">
                 Water
             </div>
         </div>
@@ -34,33 +34,33 @@
         </nav>
         <div id="status-content" class="row justify-content-center">
             <div class="col-8 content-sheet">
-                水资源认识
+                <div id="intro-content-sheet-title" class="content-sheet-title">水资源认识</div>
                 <div class="row justify-content-center title-line">
-                    <div id="status-link" class="col-auto text-start title-sheet block-link">
-                        水资源现状
+                    <div class="col-2"></div>
+                    <div id="origin-link" class="col-auto text-start title-sheet block-link">
+                        水从哪里来
                     </div>
                     <div class="col-auto">
                         <img src="../images/drop-yellow.png" class="drop">
                     </div>
-                    <div class="col-1"></div>
                 </div>
                 <div class="row justify-content-center title-line">
-                    <div class="col-1"></div>
                     <div class="col-auto">
                         <img src="../images/drop-blue.png" class="drop">
                     </div>
-                    <div id="science-link" class="col-auto text-start title-sheet block-link">
-                        水资源科普
+                    <div id="earth-link" class="col-auto text-start title-sheet block-link">
+                        地球上的水资源
                     </div>
+                    <div class="col-3"></div>
                 </div>
                 <div class="row justify-content-center title-line">
-                    <div id="" class="col-auto text-start title-sheet block-link">
-                        水资源认识3
+                    <div class="col-2"></div>
+                    <div id="status-link" class="col-auto text-start title-sheet block-link">
+                        水资源现状
                     </div>
                     <div class="col-auto">
                         <img src="../images/drop-blue-deep.png" class="drop">
                     </div>
-                    <div class="col-1"></div>
                 </div>
             </div>
         </div>
@@ -69,6 +69,13 @@
 </body>
 
 <script>
+    function changesize_text(idname, rate)
+    {
+        var scale = $(window).width() / rate;
+        document.getElementById(idname).style.fontSize = scale + 'em';
+
+    }
+
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
         
@@ -81,6 +88,8 @@
         var scale = $(window).width() / 20;
         document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
 
+        changesize_text('intro-content-sheet-title', 1000);
+
         $('#status-bg').ripples({
             resolution: 512,
             perturbance: 0.1
@@ -90,8 +99,8 @@
             window.location = 'status.html';
         });
         
-        $('#science-link').click(function() {
-            window.location = 'science.html';
+        $('#origin-link').click(function() {
+            window.location = 'origin.html';
         });
     });
 

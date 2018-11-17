@@ -210,6 +210,7 @@
 {
     font-weight: 900;
     background-color: pink;
+    border: 3px dashed;
 }
 
 .content-sheet
@@ -241,4 +242,43 @@
 .title-line
 {
     margin: 50px 0;
+}
+
+/* .title-line :last-child
+{
+    padding-bottom: 50px;
+} */
+
+#huge-title-intro
+{
+    color:rgba(232, 185, 167, 0.87);
+}
+
+#status-link
+{
+    border-color: #335A9F;
+}
+
+#origin-link
+{
+    border-color: #BD994D;
+}
+
+#earth-link
+{
+    border-color: #64AFD0;
+}
+
+
+
+#intro-content-sheet-title
+{
+    color:#335A9F;
+}
+
+.content-sheet-title
+{
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-top: 5%;
 }
