@@ -14,6 +14,7 @@
     </script>
     
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
+    <script src="../js/jquery.ripples-min.js"></script>
     <title>Water - Generalization</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
             <div class="col-2 left-right">
                 <img src="../images/icon-left-grey.png">
             </div>
-            <div class="col-4" id="generalization-bg"></div>
+            <div id="generalization-bg" class="col-4 generalization-bg"></div>
             <div class="col-4 nav-right">
                 <div class="row">
                     <div class="col-2"></div>
@@ -34,7 +35,7 @@
                         <img src="../images/icon-menu.png">
                     </div>
                 </div>
-            <hr>
+                <hr/>
                 <div class="row">
                     <div class="col-4"></div>
                     <div class="nav-title2 col-8">
@@ -50,7 +51,7 @@
                 </div>
                 <div class="row shade">
                     <div class="col-7"></div>
-                    <div class="col-4" id="shade1"></div>
+                    <div class="col-4 block-link" id="shade1"></div>
                     <div class="col-1"></div>
                 </div>
             </div>
@@ -66,34 +67,43 @@
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
 
-        var hdwidth = document.getElementsByClassName("nav-title2")[0].getBoundingClientRect().width;
+        var hdwidth = document.getElementsByClassName('nav-title2')[0].getBoundingClientRect().width;
         var scale = hdwidth / 10;
-        document.getElementById("nav-title2-1").style.fontSize = scale + "px";
+        document.getElementById('nav-title2-1').style.fontSize = scale + 'px';
 
-        hdwidth = document.getElementsByClassName("nav-title1")[0].getBoundingClientRect().width;
+        hdwidth = document.getElementsByClassName('nav-title1')[0].getBoundingClientRect().width;
         scale = hdwidth /3.5;
-        document.getElementById("nav-title1-1").style.fontSize = scale + "px";
+        document.getElementById('nav-title1-1').style.fontSize = scale + 'px';
 
-        hdwidth = document.getElementsByClassName("nav-title3")[0].getBoundingClientRect().width;
+        hdwidth = document.getElementsByClassName('nav-title3')[0].getBoundingClientRect().width;
         scale = hdwidth /12;
-        document.getElementById("nav-title3-1").style.fontSize = scale + "px";
-        document.getElementById("nav-title3-1").style.letterSpacing = (scale / 30) + "em";
+        document.getElementById('nav-title3-1').style.fontSize = scale + 'px';
+        document.getElementById('nav-title3-1').style.letterSpacing = (scale / 30) + 'em';
+
+        $('#shade1').click(function() {
+            window.location = 'intro.html';
+        });
+        
+        $('#generalization-bg').ripples({
+            resolution: 512,
+            perturbance: 0.1
+        });
     });
     $(window).resize(function() {
         $('div.container-fluid').height($(window).height());
         
-        var hdwidth = document.getElementsByClassName("nav-title2")[0].getBoundingClientRect().width;
+        var hdwidth = document.getElementsByClassName('nav-title2')[0].getBoundingClientRect().width;
         var scale = hdwidth / 10;
-        document.getElementById("nav-title2-1").style.fontSize = scale + "px";
+        document.getElementById('nav-title2-1').style.fontSize = scale + 'px';
 
-        hdwidth = document.getElementsByClassName("nav-title1")[0].getBoundingClientRect().width;
+        hdwidth = document.getElementsByClassName('nav-title1')[0].getBoundingClientRect().width;
         scale = hdwidth /3.5;
-        document.getElementById("nav-title1-1").style.fontSize = scale + "px";
+        document.getElementById('nav-title1-1').style.fontSize = scale + 'px';
 
-        hdwidth = document.getElementsByClassName("nav-title3")[0].getBoundingClientRect().width;
+        hdwidth = document.getElementsByClassName('nav-title3')[0].getBoundingClientRect().width;
         scale = hdwidth /12;
-        document.getElementById("nav-title3-1").style.fontSize = scale + "px";
-        document.getElementById("nav-title3-1").style.letterSpacing = (scale / 30) + "em";
+        document.getElementById('nav-title3-1').style.fontSize = scale + 'px';
+        document.getElementById('nav-title3-1').style.letterSpacing = (scale / 30) + 'em';
     });
 </script>
 

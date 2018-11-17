@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
 
-    <title>Water - Status</title>
+    <title>Water - Intro</title>
 </head>
 
 <body>
@@ -29,24 +29,39 @@
         <nav class="navbar">
             <ul class = "crumb">
                 <li><a href="generalization.html">主页</a></li>
-                <li><a href="intro.html">水资源认识</a></li>
-                <li><a href="#">水资源现状</a></li>
+                <li><a href="#">水资源认识</a></li>
             </ul>
         </nav>
-        <div id="status-title" class="row">
-            <div class="col-auto offset-2 align-self-center text-start title-sheet">
-                水资源现状
-            </div>
-            <div class="col-auto">
-                <img src="../images/drop-yellow.png" class="drop">
-            </div>
-        </div>
         <div id="status-content" class="row justify-content-center">
             <div class="col-8 content-sheet">
-                <p>第一段</p>
-                <p>第二段</p>
-                <p>第三段</p>
-                <p>第四段</p>
+                水资源认识
+                <div class="row justify-content-center title-line">
+                    <div id="status-link" class="col-auto text-start title-sheet block-link">
+                        水资源现状
+                    </div>
+                    <div class="col-auto">
+                        <img src="../images/drop-yellow.png" class="drop">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row justify-content-center title-line">
+                    <div class="col-1"></div>
+                    <div class="col-auto">
+                        <img src="../images/drop-blue.png" class="drop">
+                    </div>
+                    <div id="science-link" class="col-auto text-start title-sheet block-link">
+                        水资源科普
+                    </div>
+                </div>
+                <div class="row justify-content-center title-line">
+                    <div id="" class="col-auto text-start title-sheet block-link">
+                        水资源认识3
+                    </div>
+                    <div class="col-auto">
+                        <img src="../images/drop-blue-deep.png" class="drop">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -58,9 +73,6 @@
         $('div.container-fluid').height($(window).height());
         
         var scale = $(window).width() / 40;
-        document.getElementById('status-title').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 60;
         document.getElementById('status-content').style.fontSize = scale + 'px';
 
         var scale = $(window).width() / 50;
@@ -73,15 +85,20 @@
             resolution: 512,
             perturbance: 0.1
         });
+
+        $('#status-link').click(function() {
+            window.location = 'status.html';
+        });
+        
+        $('#science-link').click(function() {
+            window.location = 'science.html';
+        });
     });
 
     $(window).resize(function() {
         $('div.container-fluid').height($(window).height());
 
         var scale = $(window).width() / 40;
-        document.getElementById('status-title').style.fontSize = scale + 'px';
-        
-        var scale = $(window).width() / 60;
         document.getElementById('status-content').style.fontSize = scale + 'px';
 
         var scale = $(window).width() / 50;

@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <div id="index-bg" class="container-fluid index-bg" >
-        <div id="index-link" class="row index-link" style="background-color:rgba(187,219,253,0.3);">
-            <div class="col align-self-center text-center huge-title">
+    <div id="index-bg" class="container-fluid index-bg block-link" >
+        <div class="row justify-content-center" style="height: 100%; background-color:rgba(187,219,253,0.3);">
+            <div class="col-auto align-self-center huge-title">
                 Water
             </div>
         </div>
@@ -47,8 +47,8 @@
             $el.ripples('drop', x, y, r, s);
         }, 1000);
 
-        $('#index-link').click(function () {
-            window.location = '#';
+        $('#index-bg').click(function () {
+            window.location = 'html/generalization.html';
         });
 
         var scale = $(window).width() / 15;
