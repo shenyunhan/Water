@@ -155,7 +155,6 @@
         $('#more-generalization').click(function() {
             window.location = 'intro.html';
         });
-
         $('#more-problem').click(function() {
             window.location = '#';
         });
@@ -166,6 +165,10 @@
         $('.left-bg').ripples({
             resolution: 512,
             perturbance: 0.1
+        });
+        
+        $('#carId').on('slid.bs.carousel', function () {
+            $(window).resize();
         });
     });
     $(window).resize(function() {
