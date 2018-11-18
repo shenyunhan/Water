@@ -24,11 +24,6 @@
     height: 100%;
 }
 
-.left-bg img
-{    
-    vertical-align:middle;
-}
-
 #generalization-bg
 {
     background-image: url(../images/generalization-bg.jpg);
