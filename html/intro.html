@@ -73,7 +73,7 @@
     function changesize_text(idname, rate)
     {
         var scale = $(window).width() / rate;
-        document.getElementById(idname).style.fontSize = scale + 'px';
+        document.getElementById(idname).style.fontSize = scale + 'em';
 
     }
 
@@ -91,7 +91,7 @@
         var scale = $(window).width() / 20;
         document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
 
-        changesize_text('intro-content-sheet-title', 30);
+        changesize_text('intro-content-sheet-title', 1000);
 
         $('#intro-bg').ripples({
             resolution: 512,
