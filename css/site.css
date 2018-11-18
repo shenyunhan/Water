@@ -269,6 +269,7 @@
     margin-top: 10px;
     padding-left: 5%;
     padding-right: 5%;
+    line-height: 1em;
 }
 
 .left-right
@@ -288,7 +289,7 @@
 
 .title-line
 {
-    margin: 50px 0;
+    margin: 45px 0;
 }
 
 #huge-title-intro
@@ -322,7 +323,6 @@
 {
     font-weight: bolder;
     margin-left: 5%;
-    margin-top: 5%;
 }
 .icon-menu-div
 {
@@ -346,7 +346,8 @@
 
 .content-sheet-para
 {
-    text-indent: 5px;
+    text-indent: 5%;
+    line-height: 1.8em;
 }
 .carousel-control-prev-icon
 {
@@ -361,4 +362,29 @@
 .blank
 {
     height:15%;
+}
+
+/*图片行布局*/
+.pic1
+{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.pic1 img
+{
+    height:100%;
+    width:50%;
+}
+
+.picleft img, .picright img
+{
+    height:100%;
+}
+
+/*图片行布局end*/
+
+.picalt/*图片注释*/
+{
+    justify-content: center;
+    font-size: 0.6em;
 }

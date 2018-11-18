@@ -17,3 +17,13 @@ function changesize_img(classname, w, h)
         elem[i].style.height = height;
     }
 }
+
+function changesize_pic(classname, h)
+{
+    var width = ($(window).width() / h) + 'px';
+    var elem = document.getElementsByClassName(classname);
+    for (var i = 0; i < elem.length; i++)
+    {
+        elem[i].style.width = width;
+    }
+}
