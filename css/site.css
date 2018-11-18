@@ -18,16 +18,30 @@
     /* background-color: black; */
 }
 
-.generalization-bg
+.left-bg
 {
-    background-image: url(../images/generalization-bg.jpg);
     background-size: 100% 100%;
     height: 100%;
 }
 
-.generalization-bg img
+.left-bg img
 {    
     vertical-align:middle;
+}
+
+#generalization-bg
+{
+    background-image: url(../images/generalization-bg.jpg);
+}
+
+#problem-bg
+{
+    background-image: url(../images/problem-bg.png);
+}
+
+#protect-bg
+{
+    background-image: url(../images/protect-bg.jpg);
 }
 
 .nav-right
@@ -35,8 +49,14 @@
     background-color: rgba(245,245,245,1);
 }
 
+#problem-right
+{
+    background-color:rgba(16, 16, 16, 0.13);
+}
+
 .nav-title1
 {
+    margin-top: 5%;
     font-size: 5em;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -45,6 +65,16 @@
 #nav-title1-1
 {
     color: rgb(159, 188, 208);
+}
+
+#nav-title1-2
+{
+    color:rgba(6, 6, 6, 0.62);
+}
+
+#nav-title1-3
+{
+    color: rgba(51, 114, 185, 0.61);
 }
 
 .nav-title2
@@ -62,24 +92,58 @@
     color:rgb(54, 124, 178);
 }
 
-.nav-title3
+#nav-title2-2
+{
+    color:rgba(16, 16, 16, 0.66);
+}
+
+#nav-title2-3
+{
+    color:rgba(189, 153, 77, 1);
+}
+
+.nav-title3 span
 {
     font-weight: bold;
-    
 }
 
 #nav-title3-1
 {
     color: rgb(8,3,2);
     align-self: center;
+    letter-spacing: 0.3em;
 }
 
-#more
+#nav-title3-2
+{
+    color: rgba(117, 15, 15, 1);
+    align-self: center;
+    letter-spacing: 0.3em;
+}
+
+#nav-title3-3
+{
+    color: rgb(8,3,2);
+    align-self: center;
+    letter-spacing: 0.3em;
+}
+#more-generalization
 {
     background-image: url(../images/rec-bg.png);
     background-size: 100% 100%;
 }
 
+#more-problem
+{
+    background-image: url(../images/rec-bg-red.png);
+    background-size: 100% 100%;
+}
+
+#more-protect
+{
+    background-image: url(../images/rec-bg-deepgrey.png);
+    background-size: 100% 100%;
+}
 .crumb
 {
     list-style: none;
@@ -260,8 +324,11 @@
     margin-left: 5%;
     margin-top: 5%;
 }
+.icon-menu-div
+{
+    padding-top:20px;
+}
 
-<<<<<<< HEAD
 #origin-title-content
 {
     border:3px dashed rgba(189, 153, 77, 1);
@@ -281,7 +348,6 @@
 {
     text-indent: 5px;
 }
-=======
 .carousel-control-prev-icon
 {
     background-image: url("../images/icon-left-grey.png") !important;
@@ -291,4 +357,8 @@
 {
     background-image: url("../images/icon-right-grey.png") !important;
 }
->>>>>>> 2c12e83eaa4da515ef9a0e7399a028ef8c897f2d
+
+.blank
+{
+    height:15%;
+}

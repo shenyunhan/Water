@@ -23,6 +23,7 @@
     
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
+    <script src="../js/universal.js"></script>
     <title>Water - Generalization</title>
 </head>
 <body>
@@ -31,15 +32,16 @@
             <div class="carousel-inner bg">
                 <div class="carousel-item active bg">
                     <div class="row justify-content-center bg">
-                        <div class="col-4 generalization-bg"></div>
+                        <div class="col-4 left-bg" id="generalization-bg"></div>
                         <div class="col-4 nav-right">
-                            <div class="row">
+                            <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-1">Water</div>
-                                <div class="col-auto">
+                                <div class="col-auto icon-menu-div">
                                     <img src="../images/icon-menu.png" class="icon-menu">
                                 </div>
                             </div>
                             <hr/>
+                            <div class="row blank"></div>
                             <div class="row">
                                 <div class="col-2"></div>
                                 <div class="nav-title2 col-10 row">
@@ -48,10 +50,74 @@
                             </div>
                             <div class="row">
                                 <div class="col-4"></div>
-                                <div class="col-5 block-link" id="more">
+                                <div class="col-5 block-link" id="more-generalization">
                                     <div class="nav-title3 row">
                                         <span id = "nav-title3-1">了解更多</span>
-                                        <img id="icon-arrow" src="../images/arrow.png" >
+                                        <img class="icon-arrow" src="../images/arrow.png" >
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item bg">
+                    <div class="row justify-content-center bg">
+                        <div class="col-4 left-bg" id="problem-bg"></div>
+                        <div class="col-4 nav-right" id="problem-right">
+                            <div class="row justify-content-between">
+                                <div class="nav-title1 col-auto offset-1" id="nav-title1-2">Water</div>
+                                <div class="col-auto icon-menu-div">
+                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="row blank"></div>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="nav-title2 col-10 row">
+                                    <p id = "nav-title2-2">水资源的问题</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-5 block-link" id="more-problem">
+                                    <div class="nav-title3 row">
+                                        <span id = "nav-title3-2">了解更多</span>
+                                        <img class="icon-arrow" src="../images/arrow-red.png" >
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item bg">
+                    <div class="row justify-content-center bg">
+                        <div class="col-4 left-bg" id="protect-bg"></div>
+                        <div class="col-4 nav-right">
+                            <div class="row justify-content-between">
+                                <div class="nav-title1 col-auto offset-1" id="nav-title1-3">Water</div>
+                                <div class="col-auto icon-menu-div">
+                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="row blank"></div>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="nav-title2 col-10 row">
+                                    <p id = "nav-title2-3">水资源的利用与保护</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-5 block-link" id="more-protect">
+                                    <div class="nav-title3 row">
+                                        <span id = "nav-title3-1">了解更多</span>
+                                        <img class="icon-arrow" src="../images/arrow.png" >
                                     </div>
                                 </div>
                                 <div class="col-3"></div>
@@ -74,26 +140,6 @@
 </body>
 
 <script>
-    function changesize_text(classname, rate)
-    {
-        var scale = $(window).width() / rate;
-        var elem = document.getElementsByClassName(classname);
-        for(var i = 0; i < elem.length; i ++)
-            elem[i].style.fontSize = scale + 'px';
-    }
-
-    function changesize_img(classname, w, h)
-    {
-        var width = ($(window).width() / w) + 'px';
-        var height = ($(window).height() / h) + 'px';
-        var elem = document.getElementsByClassName(classname);
-        for (var i = 0; i < elem.length; i++)
-        {
-            elem[i].style.width = width;
-            elem[i].style.height = height;
-        }
-    }
-
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
 
@@ -114,7 +160,7 @@
             window.location = 'intro.html';
         });
         
-        $('.generalization-bg').ripples({
+        $('.left-bg').ripples({
             resolution: 512,
             perturbance: 0.1
         });
