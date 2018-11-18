@@ -20,7 +20,8 @@
 </head>
 
 <body>
-    <div class="container-fluid index-bg" id="status-bg">
+    <div id="intro-bg" class="index-bg"></div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-auto offset-1 huge-title" id="huge-title-intro">
                 Water
@@ -34,7 +35,7 @@
         </nav>
         <div id="status-content" class="row justify-content-center">
             <div class="col-8 content-sheet">
-                <div id="intro-content-sheet-title" class="content-sheet-title">水资源认识</div>
+                <div id="intro-content-sheet-title" class="row content-sheet-title">水资源认识</div>
                 <div class="row justify-content-center title-line">
                     <div class="col-2"></div>
                     <div id="origin-link" class="col-auto text-start title-sheet block-link">
@@ -78,6 +79,8 @@
 
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
+        $('#intro-bg').height($(window).height());
+        $('#intro-bg').width($(window).width());
         
         var scale = $(window).width() / 40;
         document.getElementById('status-content').style.fontSize = scale + 'px';
@@ -90,7 +93,7 @@
 
         changesize_text('intro-content-sheet-title', 30);
 
-        $('#status-bg').ripples({
+        $('#intro-bg').ripples({
             resolution: 512,
             perturbance: 0.1
         });
@@ -106,6 +109,8 @@
 
     $(window).resize(function() {
         $('div.container-fluid').height($(window).height());
+        $('#intro-bg').height($(window).height());
+        $('#intro-bg').width($(window).width());
 
         var scale = $(window).width() / 40;
         document.getElementById('status-content').style.fontSize = scale + 'px';
