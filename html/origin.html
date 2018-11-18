@@ -20,7 +20,8 @@
 </head>
 
 <body>
-    <div class="container-fluid index-bg" id="status-bg">
+    <div id="origin-bg" class="index-bg"></div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-auto offset-1 huge-title">
                 Water
@@ -56,6 +57,8 @@
 <script>
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
+        $('#origin-bg').height($(window).height());
+        $('#origin-bg').width($(window).width());
         
         var scale = $(window).width() / 40;
         document.getElementById('status-title').style.fontSize = scale + 'px';
@@ -69,7 +72,7 @@
         var scale = $(window).width() / 20;
         document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
 
-        $('#status-bg').ripples({
+        $('#origin-bg').ripples({
             resolution: 512,
             perturbance: 0.1
         });
@@ -77,6 +80,8 @@
 
     $(window).resize(function() {
         $('div.container-fluid').height($(window).height());
+        $('#origin-bg').height($(window).height());
+        $('#origin-bg').width($(window).width());
 
         var scale = $(window).width() / 40;
         document.getElementById('status-title').style.fontSize = scale + 'px';
