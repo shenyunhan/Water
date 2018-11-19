@@ -18,14 +18,3 @@ function changesize_img(classname, w, h)
     }
 }
 
-
-function changesize_pic(classname, rate)
-{
-    var elem = document.getElementsByClassName(classname);
-    var width = ($(window).width());
-    for(var i = 0; i < elem.length; i ++)
-    {
-        elem[i].style.height = (width / rate) + 'px';
-        alert(elem[i].style.height);
-    }
-}
