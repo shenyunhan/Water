@@ -48,8 +48,8 @@
                 <p class="content-sheet-para">
                     水是地球表面数量最多的天然物质，它覆盖了地球70%以上的表面。地球是一个名副其实的大水球。
                 </p>
-                <div class="row justify-content-center pic1">
-                    <img src="../images/origin-3.jpg">
+                <div class="row justify-content-center">
+                    <img src="../images/origin-3.jpg" class="pic1">
                 </div>
                 <p class="content-sheet-para">
                     地球刚刚诞生的时候，没有河流，也没有海洋，更没有生命，它的表面是干燥的，大气层中也很少有
@@ -66,13 +66,13 @@
                             形成地核，最轻的物质浮于地表。
                         </p class="content-sheet-para">
                     </div>
-                    <div class="col-auto align-self-center mr-auto picright"><!--强制距右侧最远-->
-                        <img src="../images/origin-1.jpg">
+                    <div class="col-4 align-self-center mr-auto"><!--强制距右侧最远-->
+                        <img src="../images/origin-1.jpg" class="pic-side">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-auto ml-auto align-self-center picleft"><!--alig -self-center 垂直居中-->
-                        <img src="../images/origin-2.jpg" >
+                    <div class="col-4 ml-auto align-self-center"><!--alig -self-center 垂直居中-->
+                        <img src="../images/origin-2.jpg" class="pic-side">
                     </div>
                     <div class="col-7 ml-auto align-self-center">
                         <p class="content-sheet-para">
@@ -109,8 +109,8 @@
                     是典型的电离原子，由大约90%的质子（氢核）、7%的α粒子（氦粒）和极少量其它元素的原子核组
                     成。因此，科学家认为，地球上的水是太阳风的“杰作”。
                 </p>
-                <div class="row justify-content-center pic1">
-                    <img src="../images/origin-4.jpg">
+                <div class="row justify-content-center">
+                    <img src="../images/origin-4.jpg" class="pic1">
                 </div>
                 <div class="row picalt">
                         “波拉”号卫星收集的“雪球”
@@ -164,13 +164,8 @@
             perturbance: 0.1
         });
 
-        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-h1', 40);
         changesize_text('content-sheet-para', 80);
-
-        changesize_pic('pic1', 2.5);
-        changesize_pic('picleft', 10);
-        changesize_pic('picright', 3.5);
-
     });
 
     $(window).resize(function() {
@@ -192,10 +187,6 @@
         
         changesize_text('content-sheet-h1', 50);
         changesize_text('content-sheet-para', 80);
-
-        changesize_pic('pic1', 2.5);
-        changesize_pic('picleft', 3.5);
-        changesize_pic('picright', 3.5);
     });
 </script>
 </html>

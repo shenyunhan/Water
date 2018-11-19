@@ -18,12 +18,14 @@ function changesize_img(classname, w, h)
     }
 }
 
-function changesize_pic(classname, h)
+
+function changesize_pic(classname, rate)
 {
-    var width = ($(window).width() / h) + 'px';
     var elem = document.getElementsByClassName(classname);
-    for (var i = 0; i < elem.length; i++)
+    var width = ($(window).width());
+    for(var i = 0; i < elem.length; i ++)
     {
-        elem[i].style.width = width;
+        elem[i].style.height = (width / rate) + 'px';
+        alert(elem[i].style.height);
     }
 }
