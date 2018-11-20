@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../css/site.css"/>
+    <script src="../js/jquery.ripples-min.js"></script>
+    <script src="../js/universal.js"></script>
+
+    <title>Water - Open</title>
+</head>
+
+<body>
+    <div id="status-bg" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner bg">
+            <div class="carousel-item active bg intro-bg intro-bg1"></div>
+            <div class="carousel-item bg intro-bg intro-bg2"></div>
+            <div class="carousel-item bg intro-bg intro-bg3"></div>
+            <div class="carousel-item bg intro-bg intro-bg4"></div>
+            <div class="carousel-item bg intro-bg intro-bg5"></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-auto offset-1 huge-title" id="huge-title-general">
+                Water
+            </div>
+            <div class="col-2 " style="padding-top:20px;">
+                <img src="../images/icon-menu-white.png" class="icon-menu-content">
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class = "crumb">
+                <li><a href="generalization.html">主页</a></li>
+                <li><a href="protect.html">水资源利用与保护</a></li>
+                <li><a href="#">开源</a></li>
+            </ul>
+        </nav>
+        <div id="status-title" class="row">
+            <div class="col-auto offset-2 align-self-center title-sheet" id="status-title-content">
+                开源
+            </div>
+            <div class="col-auto align-self-center">
+                <img src="../images/drop-blue-deep.png" class="drop">
+            </div>
+        </div>
+        <div id="status-content" class="row justify-content-center">
+            <div class="col-8 content-sheet">
+                <h1>海水淡化</h1>
+                <p>
+                    地球上的陆地淡水资源是很有限的，若过度开采地下水会造成地面沉陷、海水倒灌、土地盐渍化等严
+                    重后果；跨流域调水投资巨大，易受天气等条件制约，对生态环境的影响也有不少争议。如何解决淡
+                    水资源紧缺的问题，向海洋索取直接用水或淡水已经成为世界各国解决该 问题的重要手段。
+                </p>
+                <p>
+                    我国是海洋大国，且沿海和中西部地区拥有极为丰富的地下苦咸水资源，在地下取水和跨区域调水受
+                    到越来越多的条件限制的情况下，开发利用海水和苦咸水资源，进行海水(苦咸水)淡化就成为开源节
+                    流、解决我国淡水紧缺的重要战略途径。
+                </p>
+                <p>
+                    海水淡化就是除去咸水中的盐，或将淡水透析出来。大致有5类方法：（1）蒸馏：让盐分留下，水蒸
+                    \气凝结成水；（2）冻结：让咸水结冰，盐和冰分离开来；（3）反渗透：让咸水的水在巨大的压力下
+                    通过特殊的膜，留下盐；（4）离子迁移；（5）化学法。目前，高盐度溶液的脱盐技术正向着废水资
+                    源化扩展。膜集成水处理技术将会在我国大规模推广应用，而反渗透也将成为新世纪主要的海水淡化技
+                    术，其工程稳定可靠与造水成本低廉是其推广的主要原因。
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('div.container-fluid').height($(window).height());
+        $('#status-bg').height($(window).height());
+        $('#status-bg').width($(window).width());
+        
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
+        
+        changesize_pic('drop', 50);
+        changesize_pic('icon-menu-content', 30);
+        
+        $('.active').ripples({
+            resolution: 512,
+            perturbance: 0.1
+        });
+
+        $('.carousel').on('slide.bs.carousel', function () {
+            $('.active').ripples('destroy');
+        });
+
+        $('.carousel').on('slid.bs.carousel', function () {
+            $('.active').ripples({
+                resolution: 512,
+                perturbance: 0.1
+            });
+        });
+    });
+
+    $(window).resize(function() {
+        $('div.container-fluid').height($(window).height());
+        $('#status-bg').height($(window).height());
+        $('#status-bg').width($(window).width());
+
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
+
+        changesize_pic('drop', 50);
+        changesize_pic('icon-menu-content', 30);
+    });
+</script>
+</html>

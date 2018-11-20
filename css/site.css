@@ -326,17 +326,17 @@
     color:rgba(232, 185, 167, 0.87);
 }
 
-#status-link,#beneath-link
+#status-link,#beneath-link, #myself-link
 {
     border-color: #335A9F;
 }
 
-#origin-link, #fromsky-link
+#origin-link, #fromsky-link, #open-link
 {
     border-color: #BD994D;
 }
 
-#earth-link, #above-link
+#earth-link, #above-link, #close-link
 {
     border-color: #64AFD0;
 }
