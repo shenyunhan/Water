@@ -270,7 +270,6 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 20px;
-    line-height: 1em;
 }
 
 .left-right
@@ -285,7 +284,8 @@
 {
     font-weight: 600;
     color: white;
-    text-align: center;
+    text-align: left;
+    /* text-align: center; */
 }
 
 .title-line

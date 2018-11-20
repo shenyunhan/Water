@@ -15,6 +15,7 @@
     
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
+    <script src="../js/universal.js"></script>
 
     <title>Water - Status</title>
 </head>
@@ -23,9 +24,13 @@
     <div id="status-bg" class="index-bg"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-auto offset-1 huge-title">
+            <div class="col-9 offset-1 huge-title">
                 Water
             </div>
+            <div class="col-2" style="padding-top:20px;">
+                <img src="../images/icon-menu-white.png">
+            </div>
+            <div class="col-1"></div>
         </div>
         <nav class="navbar">
             <ul class = "crumb">
@@ -45,22 +50,30 @@
         <div id="status-content" class="row justify-content-center">
             <div class="col-8 content-sheet">
                 <h1 class="content-sheet-h1">全球水资源现状</h1>
-                <p>
+                <p class="content-sheet-para">
                     由于海水淡化技术还未成熟、普及，同时，在地球上的淡水资源中，分布在南北两极地区
                     的固体冰川及永冻土底冰是目前人类尚不能利用的，另外，在地下淡水中，由于它们非常
                     分散，而且绝大部分埋藏很深，因此，只有很少一部分浅层水可供人类利用。目前人类较
                     易利用的淡水资源仅占全球淡水资源的0.3%，仅占全球总储水量的十万分之七。
                 </p>
-                <img src="../images/status-1.png">
-                <p>
-                    全球淡水资源不仅短缺而且地区分布极不平衡。按地区分布，巴西、俄罗斯、加拿大、中
-                    国、美国、印度尼西亚、印度、哥伦比亚和刚果9个国家的淡水资源占世界淡水资源的60%
-                    ，而约占世界人口总数40%的80个国家和地区的人口面临淡水不足，其中26个国家的3亿人
-                    口完全生活在缺水状态。预计到2025年，全世界将有30亿人口缺水，涉及的国家和地区达
-                    40多个。
-                </p>
-                <img src="../images/status-2.jpg">
-                <p>
+                <div class="row justify-content-center">
+                    <img src="../images/status-1.png" class="pic1">
+                </div>
+                <div class="row">
+                    <div class="col-7 align-self-center mr-auto">
+                        <p class="content-sheet-para">
+                            全球淡水资源不仅短缺而且地区分布极不平衡。按地区分布，巴西、俄罗斯、加拿大、中
+                            国、美国、印度尼西亚、印度、哥伦比亚和刚果9个国家的淡水资源占世界淡水资源的60%
+                            ，而约占世界人口总数40%的80个国家和地区的人口面临淡水不足，其中26个国家的3亿人
+                            口完全生活在缺水状态。预计到2025年，全世界将有30亿人口缺水，涉及的国家和地区达
+                            40多个。
+                        </p>
+                    </div>
+                    <div class="col-4 align-self-center mr-auto">
+                        <img src="../images/status-2.jpg"  class="pic-side">
+                    </div>
+                </div>
+                <p class="content-sheet-para">
                     21世纪水资源正在变成一种宝贵的稀缺资源，水资源问题已不仅仅是资源问题，更成为关
                     系到国家经济、社会可持续发展和长治久安的重大战略问题。 本世纪以来，随着人口膨胀
                     与工农业生产规模的迅速扩大，全球淡水用量飞快增长。从1900－1975年，世界农业用水
@@ -69,7 +82,7 @@
                 </p>
 
                 <h1 class="content-sheet-h1">我国水资源现状</h1>
-                <p>
+                <p class="content-sheet-para">
                     中国水资源总量为2.8万亿立方米。其中地表水2.7万亿立方米，地下水0.83万亿立方米,
                     由于地表水与地下水相互转换、互为补给，扣除两者重复计算量0.73万亿立方米，与河川
                     径流不重复的地下水资源量约为0.1万亿立方米。按照国际公认的标准，人均水资源低于
@@ -78,8 +91,10 @@
                     均水资源量(不包括过境水)低于严重缺水线，有6个省、区(宁夏、河北、山东、河南、山
                     西、江苏)人均水资源量低于500立方米，为极度缺水地区。
                 </p>
-                <img src="../images/status-3.jpg">
-                <p>
+                <div class="row justify-content-center">
+                    <img src="../images/status-3.jpg" class="pic1">
+                </div>
+                <p class="content-sheet-para">
                     中国水资源分布的主要特点是：
                     <br>
                     总量并不丰富，人均占有量更低。中国水资源总量居世界第六位，人均占有量为2240立方米，
@@ -120,6 +135,9 @@
             resolution: 512,
             perturbance: 0.1
         });
+
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
     });
 
     $(window).resize(function() {
@@ -138,6 +156,9 @@
 
         var scale = $(window).width() / 20;
         document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
+        
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
     });
 </script>
 </html>
