@@ -16,7 +16,7 @@
     <title>Water - Generalization</title>
 </head>
 <body>
-    <div class = "container-fluid">
+    <div id="screen" class = "container-fluid">
         <div id="carId" class="carousel slide carousel-fade bg" data-ride="carousel">
             <div class="carousel-inner bg">
                 <div class="carousel-item active bg">
@@ -26,7 +26,7 @@
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-1">Water</div>
                                 <div class="col-auto icon-menu-div">
-                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                    <img src="../images/icon-menu.png" class="icon-menu" data-toggle="modal" data-target="#modId">
                                 </div>
                             </div>
                             <hr/>
@@ -58,7 +58,7 @@
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-2">Water</div>
                                 <div class="col-auto icon-menu-div">
-                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                    <img src="../images/icon-menu.png" class="icon-menu" data-toggle="modal" data-target="#modId">
                                 </div>
                             </div>
                             <hr/>
@@ -90,7 +90,7 @@
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-3">Water</div>
                                 <div class="col-auto icon-menu-div">
-                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                    <img src="../images/icon-menu.png" class="icon-menu" data-toggle="modal" data-target="#modId">
                                 </div>
                             </div>
                             <hr/>
@@ -126,11 +126,53 @@
         </div>
     </div>
 
+    <div class="modal fade" id="modId" tabindex="-1" role="dialog" aria-labelledby="modTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modTitle">目录</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-auto menu-drop"></div>
+                            <div id="menu-intro" class="col-auto block-link">
+                                <h4>水资源的认识</h4>
+                            </div>
+                        </div>
+                        <div class="row justify-content-start">
+                            <div id="menu-origin" class="col-auto offset-1 block-link">
+                                水从哪里来
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div id="menu-earth" class="col-auto block-link">
+                                地球上的水资源
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div id="menu-status" class="col-auto offset-5 block-link">
+                                水资源现状
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
 </body>
 
 <script>
     $(document).ready(function() {
-        $('div.container-fluid').height($(window).height());
+        $('#screen').height($(window).height());
 
         changesize_text('nav-title2', 40);
         changesize_text('nav-title1', 17);
@@ -147,6 +189,7 @@
         $('#more-generalization').click(function() {
             window.location = 'intro.html';
         });
+
         $('#more-problem').click(function() {
             window.location = '#';
         });
@@ -154,6 +197,23 @@
         $('#more-protect').click(function() {
             window.location = '#';
         });
+
+        $('#menu-intro').click(function () {
+            window.location = 'intro.html';
+        });
+
+        $('#menu-origin').click(function () {
+            window.location = 'origin.html';
+        });
+
+        $('#menu-earth').click(function () {
+            window.location = 'earth.html';
+        });
+
+        $('#menu-status').click(function () {
+            window.location = 'status.html';
+        });
+
         $('.active .left-bg').ripples({
             resolution: 512,
             perturbance: 0.1

@@ -354,6 +354,11 @@
     font-weight: bolder;
     margin-left: 5%;
 }
+
+.icon-menu
+{
+    cursor: pointer !important;
+}
 .icon-menu-div
 {
     padding-top: 20px;
@@ -433,4 +438,18 @@
     margin-top: 20px;
     font-weight: bold;
     /* color: white; */
+}
+
+.menu-drop
+{
+    background-image: url("../images/drop-grey.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.menu-hand
+{
+    background-image: url("../images/little-hand.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
