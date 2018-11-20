@@ -313,8 +313,7 @@
 {
     font-weight: 600;
     color: white;
-    text-align: left;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .title-line
@@ -322,22 +321,22 @@
     margin: 45px 0;
 }
 
-#huge-title-intro
+#huge-title-general
 {
     color:rgba(232, 185, 167, 0.87);
 }
 
-#status-link
+#status-link,#beneath-link
 {
     border-color: #335A9F;
 }
 
-#origin-link
+#origin-link, #fromsky-link
 {
     border-color: #BD994D;
 }
 
-#earth-link
+#earth-link, #above-link
 {
     border-color: #64AFD0;
 }
@@ -365,17 +364,17 @@
     padding-right: 40px;
 }
 
-#origin-title-content
+#origin-title-content, #fromsky-title-content
 {
     border:3px dashed rgba(189, 153, 77, 1);
 }
 
-#earth-title-content
+#earth-title-content, #above-title-content
 {
     border:3px dashed rgba(100, 175, 208, 1);
 }
 
-#status-title-content
+#status-title-content, #beneath-title-content
 {
     border:3px dashed rgba(51, 90, 159, 1);
 }
@@ -427,10 +426,16 @@
 }
 /*图片行布局end*/
 
+.alt-div/*图片注释外框*/
+{
+    margin-top: 5px;
+}
+
 .picalt/*图片注释*/
 {
     justify-content: center;
     font-size: 0.6em;
+    text-align: center;
 }
 
 .content-sheet-h1

@@ -28,9 +28,12 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-auto offset-1 huge-title">
+        <div class="row justify-content-between">
+            <div class="col-auto offset-1 huge-title" id="huge-title-general">
                 Water
+            </div>
+            <div class="col-2 " style="padding-top:20px;">
+                <img src="../images/icon-menu-white.png" class="icon-menu-content">
             </div>
         </div>
         <nav class="navbar">
@@ -86,6 +89,18 @@
                         <img src="../images/earth-4.jpg" class="pic3">
                     </div>
                 </div>
+                <div class="row alt-div">
+                    <div class="col-4 picalt">
+                        黄河河源地区
+                    </div>
+                    <div class="col-4 picalt">
+                        黄河入海口卫星照片
+                    </div>
+                    <div class="col-4 picalt">
+                        亚马孙河入海口卫星照片
+                    </div>
+                </div>
+
                 <h1 class="content-sheet-h1">湖泊</h1>
                 <p class="content-sheet-para">
                 　　湖泊是指陆地上相对封闭的洼地中所汇积的面积较大、水分交换缓慢的水体。
@@ -104,6 +119,17 @@
                     </div>
                     <div class="col-4">
                         <img src="../images/earth-7.jpg" class="pic3">
+                    </div>
+                </div>
+                <div class="row alt-div">
+                    <div class="col-4 picalt">
+                        青海湖风光
+                    </div>
+                    <div class="col-4 picalt">
+                        纳木错风光
+                    </div>
+                    <div class="col-4 picalt">
+                        查尔汗盐湖风光
                     </div>
                 </div>
                 
@@ -156,6 +182,14 @@
                         <img src="../images/earth-10.jpg" class="pic3">
                     </div>
                 </div>
+                <div class="row justify-content-around alt-div">
+                    <div class="col-5 picalt">
+                        湿地作用示意图
+                    </div>
+                    <div class="col-5 picalt">
+                        我国川北甘南的若尔盖草原湿地
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -175,7 +209,8 @@
         changesize_text('content-sheet-para', 80);
 
         changesize_pic('drop', 50);
-        
+        changesize_pic('icon-menu-content', 30);
+
         $('.active').ripples({
             resolution: 512,
             perturbance: 0.1
@@ -205,6 +240,7 @@
         changesize_text('content-sheet-para', 80);
 
         changesize_pic('drop', 50);
+        changesize_pic('icon-menu-content', 30);
     });
 </script>
 </html>
