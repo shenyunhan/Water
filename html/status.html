@@ -136,11 +136,9 @@
             resolution: 512,
             perturbance: 0.1
         });
-
         $('.carousel').on('slide.bs.carousel', function () {
             $('.active').ripples('destroy');
         });
-
         $('.carousel').on('slid.bs.carousel', function () {
             $('.active').ripples({
                 resolution: 512,
