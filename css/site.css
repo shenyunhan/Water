@@ -310,7 +310,8 @@
 {
     font-weight: 600;
     color: white;
-    text-align: center;
+    text-align: left;
+    /* text-align: center; */
 }
 
 .title-line
