@@ -376,15 +376,15 @@
     padding-right: 40px;
 }
 
-#origin-title-content, #fromsky-title-content
+#origin-title-content, #fromsky-title-content, #open-title-content
 {
     border:3px dashed rgba(189, 153, 77, 1);
 }
-#earth-title-content, #above-title-content
+#earth-title-content, #above-title-content, #close-title-content
 {
     border:3px dashed rgba(100, 175, 208, 1);
 }
-#status-title-content, #beneath-title-content
+#status-title-content, #beneath-title-content, #myself-title-content
 {
     border:3px dashed rgba(51, 90, 159, 1);
 }
