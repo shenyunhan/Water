@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="../css/site.css"/>
+    <script src="../js/jquery.ripples-min.js"></script>
+    <script src="../js/universal.js"></script>
+    <title>Water - FromSky</title>
+</head>
+
+<body>
+    <div id="origin-bg" class="index-bg"></div>
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-auto offset-1 huge-title" id="huge-title-general">
+                Water
+            </div>
+            <div class="col-2 " style="padding-top:20px;">
+                <img src="../images/icon-menu-white.png" class="icon-menu-content">
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class = "crumb">
+                <li><a href="generalization.html">主页</a></li>
+                <li><a href="problem.html">水资源问题</a></li>
+                <li><a href="#">从天而降</a></li>
+            </ul>
+        </nav>
+        <div id="origin-title" class="row">
+            <div class="col-auto offset-2 align-self-center title-sheet" id="fromsky-title-content">
+                从天而降
+            </div>
+            <div class="col-auto align-self-center">
+                <img src="../images/drop-yellow.png" class="drop">
+            </div>
+        </div>
+        <div id="status-content" class="row justify-content-center">
+            <div class="col-8 content-sheet">
+                <h1>从天而降的酸雨</h1>
+                <p>
+                    具有较强酸性的雨水，叫做酸雨（acid rain）。雨水是否具有较强的酸性，可以用酸碱度（pH）来
+                    表示。任何溶液都有一定的pH，其范围在0～14之间。pH等于7的溶液呈中性，pH小于7的溶液呈酸性。
+                    正常雨水的pH约为5.6，酸雨的pH则小于5.6。
+                </p>
+                <p>
+                    酸雨主要是人为地向大气中排放大量酸性物质造成的。我国的酸雨主要是因大量燃烧含硫量高的煤而
+                    形成的，此外，各种机动车排放的尾气也是形成酸雨的重要原因。
+                </p>
+                <img src="../images/fromsky-1.jpg">
+                <div class="row picalt">酸雨的形成</div>
+                <h1>酸雨的危害</h1>
+                <p>
+                    早期，酸雨多发生在挪威、瑞典等北欧国家，后来扩展到东欧和中欧，直至几乎覆盖整个欧洲。被认
+                    为酸雨主要发源地之一的德国约有1/3的森林受到酸雨不同程度的危害，在巴伐利亚每4株云杉就有1
+                    株死亡。
+                </p>
+                <div>
+                    <img src="../images/fromsky-2.jpg">
+                    <img src="../images/fromsky-3.jpg">
+                </div>
+                <div class="row justify-content-around alt-div">
+                        <div class="col-5 picalt">
+                            酸雨危害林木
+                        </div>
+                        <div class="col-5 picalt">
+                            酸雨危害林木
+                        </div>
+                    </div>
+                <p>
+                    近年来，我国一些地区已经成为酸雨多发区，酸雨污染的范围和程度已经引起人们的密切关注。从20
+                    世纪80年代以来，我国酸雨污染呈现加速发展趋势。以长江、赣州、南昌、怀化为代表的华中酸雨区
+                    ，现已成为全国酸雨污染最严重的地区之一，其中年降水pH值仅为3.53（与泡菜甚至食醋的pH相差无
+                    几），酸雨频率高于90%，已经到了“逢雨必酸”的程度。目前，我国酸雨区面积已占国土总面积的30%
+                    左右。
+                </p>
+                <p>
+                    酸雨对水体、森林和土壤具有很大的危害，因酸雨引起的经济损失也相当严重。
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('div.container-fluid').height($(window).height());
+        $('#origin-bg').height($(window).height());
+        $('#origin-bg').width($(window).width());
+
+        $('#origin-bg').ripples({
+            resolution: 512,
+            perturbance: 0.1
+        });
+
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
+        
+        changesize_pic('drop', 50);
+        changesize_pic('icon-menu-content', 30);
+    });
+
+    $(window).resize(function() {
+        $('div.container-fluid').height($(window).height());
+        $('#origin-bg').height($(window).height());
+        $('#origin-bg').width($(window).width());
+        
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
+        
+        changesize_pic('drop', 50);
+        changesize_pic('icon-menu-content', 30);
+
+    });
+</script>
+</html>

@@ -23,14 +23,13 @@
 <body>
     <div id="status-bg" class="index-bg"></div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-9 offset-1 huge-title">
+        <div class="row justify-content-between">
+            <div class="col-auto offset-1 huge-title" id="huge-title-general">
                 Water
             </div>
-            <div class="col-2" style="padding-top:20px;">
-                <img src="../images/icon-menu-white.png">
+            <div class="col-2 " style="padding-top:20px;">
+                <img src="../images/icon-menu-white.png" class="icon-menu-content">
             </div>
-            <div class="col-1"></div>
         </div>
         <nav class="navbar">
             <ul class = "crumb">
@@ -132,6 +131,8 @@
 
         changesize_text('content-sheet-h1', 50);
         changesize_text('content-sheet-para', 80);
+        
+        changesize_pic('icon-menu-content', 30);
     });
 
     $(window).resize(function() {
@@ -143,21 +144,11 @@
         changesize_text('title-sheet', 40);
         changesize_text('content-sheet', 60);
         
-<<<<<<< HEAD
-        var scale = $(window).width() / 60;
-        document.getElementById('status-content').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 50;
-        document.getElementsByClassName('drop')[0].style.width = scale + 'px';
-
-        var scale = $(window).width() / 20;
-        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
-        
         changesize_text('content-sheet-h1', 50);
         changesize_text('content-sheet-para', 80);
-=======
+        
+        changesize_pic('icon-menu-content', 30);
         changesize_pic('drop', 50);
->>>>>>> b61817320b9b14a65f45669cb7a5b5ce6c2fcf6b
     });
 </script>
 </html>

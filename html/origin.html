@@ -22,9 +22,12 @@
 <body>
     <div id="origin-bg" class="index-bg"></div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-auto offset-1 huge-title">
+        <div class="row justify-content-between">
+            <div class="col-auto offset-1 huge-title" id="huge-title-general">
                 Water
+            </div>
+            <div class="col-2 " style="padding-top:20px;">
+                <img src="../images/icon-menu-white.png" class="icon-menu-content">
             </div>
         </div>
         <nav class="navbar">
@@ -159,6 +162,7 @@
         changesize_text('content-sheet-para', 80);
         
         changesize_pic('drop', 50);
+        changesize_pic('icon-menu-content', 30);
     });
 
     $(window).resize(function() {
@@ -173,6 +177,8 @@
         changesize_text('content-sheet-para', 80);
         
         changesize_pic('drop', 50);
+        changesize_pic('icon-menu-content', 30);
+
     });
 </script>
 </html>

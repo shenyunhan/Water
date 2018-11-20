@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
     <script src="../js/universal.js"></script>
-    <title>Water - Intro</title>
+    <title>Water - Problem</title>
 </head>
 
 <body>
@@ -33,18 +33,18 @@
         <nav class="navbar">
             <ul class = "crumb">
                 <li><a href="generalization.html">主页</a></li>
-                <li><a href="#">水资源认识</a></li>
+                <li><a href="#">水资源问题</a></li>
             </ul>
         </nav>
         <div class="row justify-content-center">
             <div class="col-8 content-sheet">
                 <div id="intro-content-sheet-title" class="row content-sheet-title">
-                    水资源认识
+                    水资源问题
                 </div>
                 <div class="row justify-content-center title-line">
                     <div class="col-2"></div>
-                    <div id="origin-link" class="col-auto align-self-center title-sheet block-link">
-                        水从哪里来
+                    <div id="fromsky-link" class="col-auto align-self-center title-sheet block-link">
+                        从天而降
                     </div>
                     <div class="col-auto align-self-center">
                         <img src="../images/drop-yellow.png" class="drop">
@@ -54,15 +54,15 @@
                     <div class="col-auto align-self-center">
                         <img src="../images/drop-blue.png" class="drop">
                     </div>
-                    <div id="earth-link" class="col-auto align-self-center title-sheet block-link">
-                        地球上的水资源
+                    <div id="above-link" class="col-auto align-self-center title-sheet block-link">
+                        地表之上
                     </div>
                     <div class="col-3"></div>
                 </div>
                 <div class="row justify-content-center title-line">
                     <div class="col-2"></div>
-                    <div id="status-link" class="col-auto align-self-center title-sheet block-link">
-                        水资源现状
+                    <div id="beneath-link" class="col-auto align-self-center title-sheet block-link">
+                        地表之下
                     </div>
                     <div class="col-auto align-self-center">
                         <img src="../images/drop-blue-deep.png" class="drop">
@@ -92,16 +92,16 @@
             perturbance: 0.1
         });
 
-        $('#status-link').click(function() {
-            window.location = 'status.html';
+        $('#fromsky-link').click(function() {
+            window.location = 'fromsky.html';
         });
         
-        $('#origin-link').click(function() {
-            window.location = 'origin.html';
+        $('#above-link').click(function() {
+            window.location = 'above.html';
         });
 
-        $('#earth-link').click(function() {
-            window.location = 'earth.html';
+        $('#beneath-link').click(function() {
+            window.location = 'beneath.html';
         });
     });
 
