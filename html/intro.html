@@ -15,7 +15,7 @@
     
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
-
+    <script src="../js/universal.js"></script>
     <title>Water - Intro</title>
 </head>
 
@@ -70,13 +70,6 @@
 </body>
 
 <script>
-    function changesize_text(idname, rate)
-    {
-        var scale = $(window).width() / rate;
-        document.getElementById(idname).style.fontSize = scale + 'em';
-
-    }
-
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
         $('#intro-bg').height($(window).height());
