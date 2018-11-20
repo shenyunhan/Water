@@ -17,7 +17,15 @@
 </head>
 
 <body>
-    <div id="origin-bg" class="index-bg"></div>
+    <div id="orign-bg" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner bg">
+            <div class="carousel-item active bg intro-bg intro-bg1"></div>
+            <div class="carousel-item bg intro-bg intro-bg2"></div>
+            <div class="carousel-item bg intro-bg intro-bg3"></div>
+            <div class="carousel-item bg intro-bg intro-bg4"></div>
+            <div class="carousel-item bg intro-bg intro-bg5"></div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-auto offset-1 huge-title">
@@ -144,11 +152,6 @@
         $('#origin-bg').height($(window).height());
         $('#origin-bg').width($(window).width());
 
-        $('#origin-bg').ripples({
-            resolution: 512,
-            perturbance: 0.1
-        });
-
         changesize_text('huge-title', 20);
         changesize_text('title-sheet', 40);
         changesize_text('content-sheet', 60);
@@ -156,6 +159,22 @@
         changesize_text('content-sheet-para', 80);
         
         changesize_pic('drop', 50);
+        
+        $('.active').ripples({
+            resolution: 512,
+            perturbance: 0.1
+        });
+
+        $('.carousel').on('slide.bs.carousel', function () {
+            $('.active').ripples('destroy');
+        });
+
+        $('.carousel').on('slid.bs.carousel', function () {
+            $('.active').ripples({
+                resolution: 512,
+                perturbance: 0.1
+            });
+        });
     });
 
     $(window).resize(function() {

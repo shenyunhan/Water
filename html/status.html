@@ -18,7 +18,15 @@
 </head>
 
 <body>
-    <div id="status-bg" class="index-bg"></div>
+    <div id="status-bg" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner bg">
+            <div class="carousel-item active bg intro-bg intro-bg1"></div>
+            <div class="carousel-item bg intro-bg intro-bg2"></div>
+            <div class="carousel-item bg intro-bg intro-bg3"></div>
+            <div class="carousel-item bg intro-bg intro-bg4"></div>
+            <div class="carousel-item bg intro-bg intro-bg5"></div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-9 offset-1 huge-title">
@@ -119,16 +127,26 @@
         changesize_text('huge-title', 20);
         changesize_text('title-sheet', 40);
         changesize_text('content-sheet', 60);
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
         
         changesize_pic('drop', 50);
-
-        $('#status-bg').ripples({
+        
+        $('.active').ripples({
             resolution: 512,
             perturbance: 0.1
         });
 
-        changesize_text('content-sheet-h1', 50);
-        changesize_text('content-sheet-para', 80);
+        $('.carousel').on('slide.bs.carousel', function () {
+            $('.active').ripples('destroy');
+        });
+
+        $('.carousel').on('slid.bs.carousel', function () {
+            $('.active').ripples({
+                resolution: 512,
+                perturbance: 0.1
+            });
+        });
     });
 
     $(window).resize(function() {
@@ -139,22 +157,10 @@
         changesize_text('huge-title', 20);
         changesize_text('title-sheet', 40);
         changesize_text('content-sheet', 60);
-        
-<<<<<<< HEAD
-        var scale = $(window).width() / 60;
-        document.getElementById('status-content').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 50;
-        document.getElementsByClassName('drop')[0].style.width = scale + 'px';
-
-        var scale = $(window).width() / 20;
-        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
-        
         changesize_text('content-sheet-h1', 50);
         changesize_text('content-sheet-para', 80);
-=======
+
         changesize_pic('drop', 50);
->>>>>>> b61817320b9b14a65f45669cb7a5b5ce6c2fcf6b
     });
 </script>
 </html>

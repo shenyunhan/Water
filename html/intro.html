@@ -88,11 +88,6 @@
 
         changesize_pic('drop', 50);
 
-        $('.active').ripples({
-            resolution: 512,
-            perturbance: 0.1
-        });
-
         $('#status-link').click(function() {
             window.location = 'status.html';
         });
@@ -103,6 +98,11 @@
 
         $('#earth-link').click(function() {
             window.location = 'earth.html';
+        });
+
+        $('.active').ripples({
+            resolution: 512,
+            perturbance: 0.1
         });
 
         $('.carousel').on('slide.bs.carousel', function () {
