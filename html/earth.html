@@ -35,15 +35,15 @@
                 <li><a href="#">水资源现状</a></li>
             </ul>
         </nav>
-        <div id="earth-title" class="row">
-                <div class="col-auto offset-2">
-                    <img src="../images/drop-blue.png" class="drop">
-                </div>
-            <div class="col-auto align-self-center text-start title-sheet" id="earth-title-content">
+        <div class="row">
+            <div class="col-auto offset-2 align-self-center">
+                <img src="../images/drop-blue.png" class="drop">
+            </div>
+            <div class="col-auto align-self-center title-sheet" id="earth-title-content">
                 地球上的水资源
             </div>
         </div>
-        <div id="status-content" class="row justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-8 content-sheet">
                 <h1 class="content-sheet-h1">海洋</h1>
                 <p class="content-sheet-para">
@@ -163,25 +163,19 @@
         $('#status-bg').height($(window).height());
         $('#status-bg').width($(window).width());
         
-        var scale = $(window).width() / 40;
-        document.getElementById('earth-title').style.fontSize = scale + 'px';
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
+        changesize_text('content-sheet-h1', 50);
+        changesize_text('content-sheet-para', 80);
 
-        var scale = $(window).width() / 60;
-        document.getElementById('status-content').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 50;
-        document.getElementsByClassName('drop')[0].style.width = scale + 'px';
-
-        var scale = $(window).width() / 20;
-        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
+        changesize_pic('drop', 50);
 
         $('#status-bg').ripples({
             resolution: 512,
             perturbance: 0.1
         });
 
-        changesize_text('content-sheet-h1', 50);
-        changesize_text('content-sheet-para', 80);
         });
 
     $(window).resize(function() {
@@ -189,20 +183,13 @@
         $('#status-bg').height($(window).height());
         $('#status-bg').width($(window).width());
 
-        var scale = $(window).width() / 40;
-        document.getElementById('earth-title').style.fontSize = scale + 'px';
-        
-        var scale = $(window).width() / 60;
-        document.getElementById('status-content').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 50;
-        document.getElementsByClassName('drop')[0].style.width = scale + 'px';
-
-        var scale = $(window).width() / 20;
-        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
-        
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
         changesize_text('content-sheet-h1', 50);
         changesize_text('content-sheet-para', 80);
+
+        changesize_pic('drop', 50);
     });
 </script>
 </html>

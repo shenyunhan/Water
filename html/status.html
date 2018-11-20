@@ -40,10 +40,10 @@
             </ul>
         </nav>
         <div id="status-title" class="row">
-            <div class="col-auto offset-2 align-self-center text-start title-sheet" id="status-title-content">
+            <div class="col-auto offset-2 align-self-center title-sheet" id="status-title-content">
                 水资源现状
             </div>
-            <div class="col-auto">
+            <div class="col-auto align-self-center">
                 <img src="../images/drop-blue-deep.png" class="drop">
             </div>
         </div>
@@ -119,17 +119,11 @@
         $('#status-bg').height($(window).height());
         $('#status-bg').width($(window).width());
         
-        var scale = $(window).width() / 40;
-        document.getElementById('status-title').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 60;
-        document.getElementById('status-content').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 50;
-        document.getElementsByClassName('drop')[0].style.width = scale + 'px';
-
-        var scale = $(window).width() / 20;
-        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
+        
+        changesize_pic('drop', 50);
 
         $('#status-bg').ripples({
             resolution: 512,
@@ -145,9 +139,11 @@
         $('#status-bg').height($(window).height());
         $('#status-bg').width($(window).width());
 
-        var scale = $(window).width() / 40;
-        document.getElementById('status-title').style.fontSize = scale + 'px';
+        changesize_text('huge-title', 20);
+        changesize_text('title-sheet', 40);
+        changesize_text('content-sheet', 60);
         
+<<<<<<< HEAD
         var scale = $(window).width() / 60;
         document.getElementById('status-content').style.fontSize = scale + 'px';
 
@@ -159,6 +155,9 @@
         
         changesize_text('content-sheet-h1', 50);
         changesize_text('content-sheet-para', 80);
+=======
+        changesize_pic('drop', 50);
+>>>>>>> b61817320b9b14a65f45669cb7a5b5ce6c2fcf6b
     });
 </script>
 </html>
