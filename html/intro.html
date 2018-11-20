@@ -23,7 +23,7 @@
     <div id="intro-bg" class="index-bg"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-auto offset-1 huge-title" id="huge-title-intro">
+            <div id="huge-title-intro" class="col-auto offset-1 huge-title">
                 Water
             </div>
         </div>
@@ -33,33 +33,35 @@
                 <li><a href="#">水资源认识</a></li>
             </ul>
         </nav>
-        <div id="status-content" class="row justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-8 content-sheet">
-                <div id="intro-content-sheet-title" class="row content-sheet-title">水资源认识</div>
+                <div id="intro-content-sheet-title" class="row content-sheet-title">
+                    水资源认识
+                </div>
                 <div class="row justify-content-center title-line">
                     <div class="col-2"></div>
-                    <div id="origin-link" class="col-auto text-start title-sheet block-link">
+                    <div id="origin-link" class="col-auto align-self-center title-sheet block-link">
                         水从哪里来
                     </div>
-                    <div class="col-auto">
+                    <div class="col-auto align-self-center">
                         <img src="../images/drop-yellow.png" class="drop">
                     </div>
                 </div>
                 <div class="row justify-content-center title-line">
-                    <div class="col-auto">
+                    <div class="col-auto align-self-center">
                         <img src="../images/drop-blue.png" class="drop">
                     </div>
-                    <div id="earth-link" class="col-auto text-start title-sheet block-link">
+                    <div id="earth-link" class="col-auto align-self-center title-sheet block-link">
                         地球上的水资源
                     </div>
                     <div class="col-3"></div>
                 </div>
                 <div class="row justify-content-center title-line">
                     <div class="col-2"></div>
-                    <div id="status-link" class="col-auto text-start title-sheet block-link">
+                    <div id="status-link" class="col-auto align-self-center title-sheet block-link">
                         水资源现状
                     </div>
-                    <div class="col-auto">
+                    <div class="col-auto align-self-center">
                         <img src="../images/drop-blue-deep.png" class="drop">
                     </div>
                 </div>
@@ -75,16 +77,11 @@
         $('#intro-bg').height($(window).height());
         $('#intro-bg').width($(window).width());
         
-        var scale = $(window).width() / 40;
-        document.getElementById('status-content').style.fontSize = scale + 'px';
+        changesize_text('huge-title', 20);
+        changesize_text('content-sheet-title', 40);
+        changesize_text('title-sheet', 50);
 
-        var scale = $(window).width() / 50;
-        document.getElementsByClassName('drop')[0].style.width = scale + 'px';
-
-        var scale = $(window).width() / 20;
-        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
-
-        changesize_text('intro-content-sheet-title', 1000);
+        changesize_pic('drop', 50);
 
         $('#intro-bg').ripples({
             resolution: 512,
@@ -109,14 +106,11 @@
         $('#intro-bg').height($(window).height());
         $('#intro-bg').width($(window).width());
 
-        var scale = $(window).width() / 40;
-        document.getElementById('status-content').style.fontSize = scale + 'px';
-
-        var scale = $(window).width() / 50;
-        document.getElementsByClassName('drop')[0].style.width = scale + 'px';
-
-        var scale = $(window).width() / 20;
-        document.getElementsByClassName('huge-title')[0].style.fontSize = scale + 'px';
+        changesize_text('huge-title', 20);
+        changesize_text('content-sheet-title', 40);
+        changesize_text('title-sheet', 50);
+        
+        changesize_pic('drop', 50);
     });
 </script>
 </html>

@@ -270,7 +270,6 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 20px;
-    line-height: 1em;
 }
 
 .left-right
@@ -327,7 +326,8 @@
 }
 .icon-menu-div
 {
-    padding-top:20px;
+    padding-top: 20px;
+    padding-right: 40px;
 }
 
 #origin-title-content
