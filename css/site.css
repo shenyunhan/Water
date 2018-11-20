@@ -1,4 +1,7 @@
-#intro-bg
+#intro-bg,
+#earth-bg,
+#orign-bg,
+#status-bg
 {
     position: fixed;
 }
