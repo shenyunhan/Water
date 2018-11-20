@@ -13,20 +13,21 @@
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
     <script src="../js/universal.js"></script>
+
     <title>Water - Generalization</title>
 </head>
 <body>
-    <div class = "container-fluid">
+    <div id="screen" class = "container-fluid">
         <div id="carId" class="carousel slide carousel-fade bg" data-ride="carousel">
             <div class="carousel-inner bg">
                 <div class="carousel-item active bg">
                     <div class="row justify-content-center bg">
-                        <div class="col-4 left-bg" id="generalization-bg"></div>
+                        <div class="col-4 left-bg" id="generalization-intro-bg"></div>
                         <div class="col-4 nav-right">
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-1">Water</div>
                                 <div class="col-auto icon-menu-div">
-                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                    <img src="../images/icon-menu.png" class="icon-menu" data-toggle="modal" data-target="#modId">
                                 </div>
                             </div>
                             <hr/>
@@ -39,7 +40,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-4"></div>
-                                <div class="col-5 block-link" id="more-generalization">
+                                <div class="col-5 block-link" id="more-intro">
                                     <div class="nav-title3 row">
                                         <span id = "nav-title3-1">了解更多</span>
                                         <img class="icon-arrow" src="../images/arrow.png" >
@@ -53,12 +54,12 @@
 
                 <div class="carousel-item bg">
                     <div class="row justify-content-center bg">
-                        <div class="col-4 left-bg" id="problem-bg"></div>
+                        <div class="col-4 left-bg" id="generalization-problem-bg"></div>
                         <div class="col-4 nav-right" id="problem-right">
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-2">Water</div>
                                 <div class="col-auto icon-menu-div">
-                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                    <img src="../images/icon-menu.png" class="icon-menu" data-toggle="modal" data-target="#modId">
                                 </div>
                             </div>
                             <hr/>
@@ -85,12 +86,12 @@
 
                 <div class="carousel-item bg">
                     <div class="row justify-content-center bg">
-                        <div class="col-4 left-bg" id="protect-bg"></div>
+                        <div class="col-4 left-bg" id="generalization-protect-bg"></div>
                         <div class="col-4 nav-right">
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-3">Water</div>
                                 <div class="col-auto icon-menu-div">
-                                    <img src="../images/icon-menu.png" class="icon-menu">
+                                    <img src="../images/icon-menu.png" class="icon-menu" data-toggle="modal" data-target="#modId">
                                 </div>
                             </div>
                             <hr/>
@@ -126,11 +127,75 @@
         </div>
     </div>
 
+    <div class="modal fade" id="modId" tabindex="-1" role="dialog" aria-labelledby="modTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modTitle">目录</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-auto menu-drop"></div>
+                            <div id="menu-intro" class="col-auto block-link">
+                                <h4>水资源的认识</h4>
+                            </div>
+                        </div>
+                        <div class="row justify-content-start">
+                            <div id="menu-origin" class="col-auto offset-1 block-link">
+                                水从哪里来
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div id="menu-earth" class="col-auto offset-1 block-link">
+                                地球上的水资源
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div id="menu-status" class="col-auto block-link">
+                                水资源现状
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto menu-drop"></div>
+                            <div id="menu-problem" class="col-auto block-link">
+                                <h4>水资源的问题</h4>
+                            </div>
+                        </div>
+                        <div class="row justify-content-start">
+                            <div id="menu-fromsky" class="col-auto offset-1 block-link">
+                                从天而降
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div id="menu-above" class="col-auto offset-1 block-link">
+                                地表之上
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div id="menu-beneath" class="col-auto block-link">
+                                地表之下
+                            </div>
+                            <div class="col-auto menu-hand"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script>
     $(document).ready(function() {
-        $('div.container-fluid').height($(window).height());
+        $('#screen').height($(window).height());
 
         changesize_text('nav-title2', 40);
         changesize_text('nav-title1', 17);
@@ -139,30 +204,55 @@
         changesize_pic('icon-menu', 30);
         changesize_pic('icon-arrow', 20);
         changesize_pic('carousel-control-icon', 20);
-
         var elem = document.getElementsByClassName('carousel-control-icon');
         for (var i = 0; i < elem.length; i++)
             elem[i].style.height = elem[i].style.width;
 
-        $('#more-generalization').click(function() {
+        $('#more-intro').click(function() {
             window.location = 'intro.html';
         });
         $('#more-problem').click(function() {
             window.location = 'problem.html';
         });
-        
         $('#more-protect').click(function() {
             window.location = 'protect.html';
         });
+
+        //intro
+        $('#menu-intro').click(function () {
+            window.location = 'intro.html';
+        });
+        $('#menu-origin').click(function () {
+            window.location = 'origin.html';
+        });
+        $('#menu-earth').click(function () {
+            window.location = 'earth.html';
+        });
+        $('#menu-status').click(function () {
+            window.location = 'status.html';
+        });
+
+        //problem
+        $('#menu-problem').click(function () {
+            window.location = 'problem.html';
+        });
+        $('#menu-fromsky').click(function () {
+            window.location = 'fromsky.html';
+        });
+        $('#menu-above').click(function () {
+            window.location = 'above.html';
+        });
+        $('#menu-beneath').click(function () {
+            window.location = 'beneath.html';
+        });
+
         $('.active .left-bg').ripples({
             resolution: 512,
             perturbance: 0.1
         });
-        
         $('#carId').on('slide.bs.carousel', function () {
             $('.active .left-bg').ripples('destroy');
         });
-
         $('#carId').on('slid.bs.carousel', function () {
             $('.active .left-bg').ripples({
                 resolution: 512,
@@ -180,11 +270,9 @@
         changesize_pic('icon-menu', 30);
         changesize_pic('icon-arrow', 20);
         changesize_pic('carousel-control-icon', 20);
-        
         var elem = document.getElementsByClassName('carousel-control-icon');
         for (var i = 0; i < elem.length; i++)
             elem[i].style.height = elem[i].style.width;
     });
 </script>
-
 </html>

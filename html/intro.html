@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
     <script src="../js/universal.js"></script>
+
     <title>Water - Intro</title>
 </head>
 
@@ -95,11 +96,9 @@
         $('#status-link').click(function() {
             window.location = 'status.html';
         });
-        
         $('#origin-link').click(function() {
             window.location = 'origin.html';
         });
-
         $('#earth-link').click(function() {
             window.location = 'earth.html';
         });
@@ -108,11 +107,9 @@
             resolution: 512,
             perturbance: 0.1
         });
-
         $('.carousel').on('slide.bs.carousel', function () {
             $('.active').ripples('destroy');
         });
-
         $('.carousel').on('slid.bs.carousel', function () {
             $('.active').ripples({
                 resolution: 512,

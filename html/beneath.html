@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous">
-    </script>
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="../css/site.css"/>
     <script src="../js/jquery.ripples-min.js"></script>
     <script src="../js/universal.js"></script>
+
     <title>Water - Beneath</title>
 </head>
 
 <body>
-    <div id="origin-bg" class="index-bg"></div>
+    <div id="beneath-bg" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner bg">
+            <div class="carousel-item active bg problem-bg problem-bg1"></div>
+            <div class="carousel-item bg problem-bg problem-bg2"></div>
+            <div class="carousel-item bg problem-bg problem-bg3"></div>
+            <div class="carousel-item bg problem-bg problem-bg4"></div>
+            <div class="carousel-item bg problem-bg problem-bg5"></div>
+            <div class="carousel-item bg problem-bg problem-bg6"></div>
+            <div class="carousel-item bg problem-bg problem-bg7"></div>
+            <div class="carousel-item bg problem-bg problem-bg8"></div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row justify-content-between">
             <div class="col-auto offset-1 huge-title" id="huge-title-general">
@@ -134,13 +143,8 @@
 <script>
     $(document).ready(function() {
         $('div.container-fluid').height($(window).height());
-        $('#origin-bg').height($(window).height());
-        $('#origin-bg').width($(window).width());
-
-        $('#origin-bg').ripples({
-            resolution: 512,
-            perturbance: 0.1
-        });
+        $('#beneath-bg').height($(window).height());
+        $('#beneath-bg').width($(window).width());
 
         changesize_text('huge-title', 20);
         changesize_text('title-sheet', 40);
@@ -150,12 +154,26 @@
         
         changesize_pic('drop', 50);
         changesize_pic('icon-menu-content', 30);
+        
+        $('.active').ripples({
+            resolution: 512,
+            perturbance: 0.1
+        });
+        $('.carousel').on('slide.bs.carousel', function () {
+            $('.active').ripples('destroy');
+        });
+        $('.carousel').on('slid.bs.carousel', function () {
+            $('.active').ripples({
+                resolution: 512,
+                perturbance: 0.1
+            });
+        });
     });
 
     $(window).resize(function() {
         $('div.container-fluid').height($(window).height());
-        $('#origin-bg').height($(window).height());
-        $('#origin-bg').width($(window).width());
+        $('#beneath-bg').height($(window).height());
+        $('#beneath-bg').width($(window).width());
         
         changesize_text('huge-title', 20);
         changesize_text('title-sheet', 40);
@@ -165,7 +183,6 @@
         
         changesize_pic('drop', 50);
         changesize_pic('icon-menu-content', 30);
-
     });
 </script>
 </html>
