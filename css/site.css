@@ -65,6 +65,10 @@
 {
     background-image: url(../images/problem-bg4.jpg);
 }
+.problem-bg5
+{
+    background-image: url(../images/problem-bg5.jpg);
+}
 .protect-bg1
 {
     background-image: url(../images/protect-bg1.jpg);
@@ -344,7 +348,7 @@
 
 .title-line
 {
-    margin: 45px 0;
+    margin: 60px 0;
 }
 
 #huge-title-general
@@ -373,6 +377,7 @@
 {
     font-weight: bolder;
     margin-left: 5%;
+    margin-top: 20px;
 }
 
 .icon-menu,
@@ -457,6 +462,7 @@
     font-weight: bold;
 }
 
+.logo,
 .menu-drop,
 .menu-hand
 {
@@ -464,13 +470,26 @@
     background-position: center;
 }
 
+.logo
+{
+    background-image: url(../images/logo.png);
+    background-size: 75%;
+}
+
 .menu-drop
 {
-    background-image: url("../images/drop-grey.png");
+    background-image: url(../images/drop-grey.png);
     background-size: 75%;
 }
 .menu-hand
 {
-    background-image: url("../images/little-hand.png");
+    background-image: url(../images/little-hand.png);
     background-size: 100%;
 }
+
+.top-nav
+{
+    padding-top: 20px;
+}
+
+
