@@ -16,14 +16,15 @@
 
     <title>Water - Generalization</title>
 </head>
-<body class="side">
+<body>
+    <div id="generalization-bg" class="generalization-bg"></div>
     <div id="screen" class = "container-fluid">
         <div id="carId" class="carousel slide carousel-fade bg" data-ride="carousel">
             <div class="carousel-inner bg">
                 <div class="carousel-item active bg">
                     <div class="row justify-content-center bg">
                         <div class="col-4 left-bg" id="generalization-intro-bg"></div>
-                        <div class="col-4 nav-right">
+                        <div class="col-4 trans-light">
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-1">Water</div>
                                 <div class="col-auto icon-menu-div">
@@ -55,7 +56,7 @@
                 <div class="carousel-item bg">
                     <div class="row justify-content-center bg">
                         <div class="col-4 left-bg" id="generalization-problem-bg"></div>
-                        <div class="col-4 nav-right" id="problem-right">
+                        <div class="col-4 trans-dark">
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-2">Water</div>
                                 <div class="col-auto icon-menu-div">
@@ -87,7 +88,7 @@
                 <div class="carousel-item bg">
                     <div class="row justify-content-center bg">
                         <div class="col-4 left-bg" id="generalization-protect-bg"></div>
-                        <div class="col-4 nav-right">
+                        <div class="col-4 trans-light">
                             <div class="row justify-content-between">
                                 <div class="nav-title1 col-auto offset-1" id="nav-title1-3">Water</div>
                                 <div class="col-auto icon-menu-div">
@@ -220,6 +221,8 @@
 <script>
     $(document).ready(function() {
         $('#screen').height($(window).height());
+        $('#generalization-bg').width($(window).width());
+        $('#generalization-bg').height($(window).height());
 
         changesize_text('nav-title2', 40);
         changesize_text('nav-title1', 17);
@@ -300,6 +303,8 @@
     });
     $(window).resize(function() {
         $('#screen').height($(window).height());
+        $('#generalization-bg').width($(window).width());
+        $('#generalization-bg').height($(window).height());
         
         changesize_text('nav-title2', 40);
         changesize_text('nav-title1', 17);
