@@ -23,7 +23,6 @@
             <div class="carousel-item bg protect-bg protect-bg2"></div>
             <div class="carousel-item bg protect-bg protect-bg3"></div>
             <div class="carousel-item bg protect-bg protect-bg4"></div>
-            <div class="carousel-item bg protect-bg protect-bg5"></div>
         </div>
     </div>
     <div id="screen" class="container-fluid">
@@ -42,8 +41,46 @@
             </ul>
         </nav>
         <div class="row justify-content-center">
-            <div class="col-8 content-sheet">
-                <div id="intro-content-sheet-title" class="row content-sheet-title">
+            <div class="col-8">
+                <div id="intro-content-sheet-title" class="row content-sheet-title" style="color:rgba(255,255,255,0.8);">
+                    水资源的利用与保护
+                </div>
+                <div class="row" style="padding-bottom:10%;">
+                    <div class="col-4">
+                        <div class="card block-link open-link">
+                            <img src="../images/protect-1.jpg" class="card-img">
+                        </div>
+                        <div class="card card-offset-0 block-link open-link">
+                            <div class="card-body">
+                                <h5 class="card-text card-title">开源</h5>
+                                <p class="card-text card-abstract">怎么做才能使水资源合理利用起来呢？</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card card-offset-3 block-link close-link">
+                            <div class="card-body">
+                                <h5 class="card-text card-title">节流</h5>
+                                <p class="card-text card-abstract">废水合理回收利用也能保护水资源哦。</p>
+                            </div>
+                        </div>
+                        <div class="card card-offset-0 block-link close-link">
+                            <img src="../images/protect-2.jpg" class="card-img">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card block-link myself-link">
+                            <img src="../images/protect-3.jpg" class="card-img">
+                        </div>
+                        <div class="card card-offset-0 block-link myself-link">
+                            <div class="card-body">
+                                <h5 class="card-text card-title">从我做起</h5>
+                                <p class="card-text card-abstract">保护水资源不仅要开源节流，每个人的付出更关键。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="intro-content-sheet-title" class="row content-sheet-title">
                     水资源的利用与保护
                 </div>
                 <div class="row justify-content-center title-line">
@@ -72,7 +109,7 @@
                     <div class="col-auto align-self-center">
                         <img src="../images/drop-blue-deep.png" class="drop">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -180,15 +217,33 @@
         changesize_pic('drop', 50);
         changesize_pic('icon-menu-content', 30);
 
-        $('#open-link').click(function() {
+        $('.open-link').hover(function () {
+            $('.open-link').addClass('border border-primary');
+        }, function () {
+            $('.open-link').removeClass('border border-primary');
+        });
+
+        $('.close-link').hover(function () {
+            $('.close-link').addClass('border border-primary');
+        }, function () {
+            $('.close-link').removeClass('border border-primary');
+        });
+
+        $('.myself-link').hover(function () {
+            $('.myself-link').addClass('border border-primary');
+        }, function () {
+            $('.myself-link').removeClass('border border-primary');
+        });
+
+        $('.open-link').click(function() {
             window.location = 'open.html';
         });
         
-        $('#close-link').click(function() {
+        $('.close-link').click(function() {
             window.location = 'close.html';
         });
 
-        $('#myself-link').click(function() {
+        $('.myself-link').click(function() {
             window.location = 'myself.html';
         });
 

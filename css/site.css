@@ -32,8 +32,9 @@
 .generalization-bg
 {
     position: fixed;
-    background-image: url(../images/sidebg2.jpg);
-    background-repeat: repeat;
+    /* background-image: url(../images/sidebg2.jpg);
+    background-repeat: repeat; */
+    background-color: #f4f5f6;
 }
 .intro-bg1
 {
@@ -131,7 +132,7 @@
 }
 .trans-light
 {
-    background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(255, 255, 255, 1);
 }
 .nav-title1
 {
@@ -325,8 +326,9 @@
 .title-sheet
 {
     font-weight: 900;
-    background-color: rgba(210, 172, 166, 1);
+    /* background-color: rgba(210, 172, 166, 1); */
     border: 3px dashed;
+    color:rgba(255, 255, 255, 0.8);
 }
 .content-sheet
 {
@@ -398,15 +400,18 @@
 
 #origin-title-content, #fromsky-title-content, #open-title-content
 {
-    border:3px dashed rgba(189, 153, 77, 1);
+    /* border:1px dashed rgba(189, 153, 77, 1); */
+    border:none;
 }
 #earth-title-content, #above-title-content, #close-title-content
 {
-    border:3px dashed rgba(100, 175, 208, 1);
+    /* border:3px dashed rgba(100, 175, 208, 0.5); */
+    border:none;
 }
 #status-title-content, #beneath-title-content, #myself-title-content
 {
-    border:3px dashed rgba(51, 90, 159, 1);
+    /* border:3px dashed rgba(51, 90, 159, 0.5); */
+    border:none;
 }
 
 .content-sheet-para
@@ -467,12 +472,18 @@
     font-weight: bold;
 }
 
+.index-logo,
 .logo,
 .menu-drop,
 .menu-hand
 {
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.index-logo{
+    background-image: url(../images/首页.png);
+    background-size: 100%;
 }
 
 .logo
@@ -517,4 +528,14 @@
 .card-offset-5
 {
     margin-top: 50%;
+}
+
+.card-title
+{
+    font-weight: bold;
+}
+
+.card
+{
+    border:none;
 }

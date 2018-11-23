@@ -43,8 +43,46 @@
             </ul>
         </nav>
         <div class="row justify-content-center">
-            <div class="col-8 content-sheet">
-                <div id="intro-content-sheet-title" class="row content-sheet-title">
+            <div class="col-8">
+                <div id="intro-content-sheet-title" class="row content-sheet-title" style="color:rgba(255,255,255,0.8);">
+                    水资源问题
+                </div>
+                <div class="row" style="padding-bottom:10%;">
+                    <div class="col-4">
+                        <div class="card block-link fromsky-link">
+                            <img src="../images/problem-1.jpg" class="card-img">
+                        </div>
+                        <div class="card card-offset-0 block-link fromsky-link">
+                            <div class="card-body">
+                                <h5 class="card-text card-title">从天而降</h5>
+                                <p class="card-text card-abstract">破坏水资源的祸根可以来自天空。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card card-offset-3 block-link above-link">
+                            <div class="card-body">
+                                <h5 class="card-text card-title">地表之上</h5>
+                                <p class="card-text card-abstract">地表之上肉眼可见的地方，水资源正在面临各种问题。</p>
+                            </div>
+                        </div>
+                        <div class="card card-offset-0 block-link above-link">
+                            <img src="../images/problem-2.jpg" class="card-img">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card block-link beneath-link">
+                            <img src="../images/problem-3.jpg" class="card-img">
+                        </div>
+                        <div class="card card-offset-0 block-link beneath-link">
+                            <div class="card-body">
+                                <h5 class="card-text card-title">地表之下</h5>
+                                <p class="card-text card-abstract">地表之下我们看不见的地方，水资源也存在着危机。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="intro-content-sheet-title" class="row content-sheet-title">
                     水资源问题
                 </div>
                 <div class="row justify-content-center title-line">
@@ -73,7 +111,7 @@
                     <div class="col-auto align-self-center">
                         <img src="../images/drop-blue-deep.png" class="drop">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -181,13 +219,31 @@
         changesize_pic('drop', 50);
         changesize_pic('icon-menu-content', 30);
 
-        $('#fromsky-link').click(function() {
+        $('.fromsky-link').hover(function () {
+            $('.fromsky-link').addClass('border border-primary');
+        }, function () {
+            $('.fromsky-link').removeClass('border border-primary');
+        });
+
+        $('.above-link').hover(function () {
+            $('.above-link').addClass('border border-primary');
+        }, function () {
+            $('.above-link').removeClass('border border-primary');
+        });
+
+        $('.beneath-link').hover(function () {
+            $('.beneath-link').addClass('border border-primary');
+        }, function () {
+            $('.beneath-link').removeClass('border border-primary');
+        });
+
+        $('.fromsky-link').click(function() {
             window.location = 'fromsky.html';
         });
-        $('#above-link').click(function() {
+        $('.above-link').click(function() {
             window.location = 'above.html';
         });
-        $('#beneath-link').click(function() {
+        $('.beneath-link').click(function() {
             window.location = 'beneath.html';
         });
 

@@ -24,7 +24,6 @@
             <div class="carousel-item bg intro-bg intro-bg2"></div>
             <div class="carousel-item bg intro-bg intro-bg3"></div>
             <div class="carousel-item bg intro-bg intro-bg4"></div>
-            <div class="carousel-item bg intro-bg intro-bg5"></div>
         </div>
     </div>
     <div id="screen" class="container-fluid">
@@ -44,40 +43,40 @@
         </nav>
         <div class="row justify-content-center">
             <div class="col-8">
-                <div id="intro-content-sheet-title" class="row content-sheet-title">
+                <div id="intro-content-sheet-title" class="row content-sheet-title" style="color:rgba(255,255,255,0.8);">
                     水资源认识
                 </div>
-                <div class="row">
+                <div class="row" style="padding-bottom:10%;">
                     <div class="col-4">
-                        <div class="card">
-                            <img src="../images/4.jpg" class="card-img">
+                        <div class="card block-link origin-link">
+                            <img src="../images/intro-1.jpg" class="card-img">
                         </div>
-                        <div class="card card-offset-0">
+                        <div class="card card-offset-0 block-link origin-link">
                             <div class="card-body">
-                                <h5 class="card-text">水从哪里来</h5>
-                                <p class="card-text">摘要</p>
+                                <h5 class="card-text card-title">水从哪里来</h5>
+                                <p class="card-text card-abstract">看似取之不尽用之不竭的水是从哪里来的呢？</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="card card-offset-3">
+                        <div class="card card-offset-3 block-link earth-link">
                             <div class="card-body">
-                                <h5 class="card-text">水从哪里来</h5>
-                                <p class="card-text">摘要</p>
+                                <h5 class="card-text card-title">地球上的水资源</h5>
+                                <p class="card-text card-abstract">地球上的水资源都由哪几部分构成？他们真的取之不尽用之不竭吗？</p>
                             </div>
                         </div>
-                        <div class="card card-offset-0">
-                            <img src="../images/4.jpg" class="card-img">
+                        <div class="card card-offset-0 block-link earth-link">
+                            <img src="../images/intro-2.jpg" class="card-img">
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="card">
-                            <img src="../images/4.jpg" class="card-img">
+                        <div class="card block-link status-link">
+                            <img src="../images/intro-3.jpg" class="card-img">
                         </div>
-                        <div class="card card-offset-0">
+                        <div class="card card-offset-0 block-link status-link">
                             <div class="card-body">
-                                <h5 class="card-text">水从哪里来</h5>
-                                <p class="card-text">摘要</p>
+                                <h5 class="card-text card-title">水资源现状</h5>
+                                <p class="card-text card-abstract">全世界水资源分布是怎样的呢？我国又是怎样的呢？</p>
                             </div>
                         </div>
                     </div>
@@ -212,17 +211,37 @@
         changesize_text('huge-title', 20);
         changesize_text('content-sheet-title', 40);
         changesize_text('title-sheet', 50);
+        changesize_text('card-title',70);
+        changesize_text('card-abstract', 90);
 
         changesize_pic('drop', 50);
         changesize_pic('icon-menu-content', 30);
 
-        $('#status-link').click(function() {
+        $('.earth-link').hover(function () {
+            $('.earth-link').addClass('border border-primary');
+        }, function () {
+            $('.earth-link').removeClass('border border-primary');
+        });
+        
+        $('.origin-link').hover(function () {
+            $('.origin-link').addClass('border border-primary');
+        }, function () {
+            $('.origin-link').removeClass('border border-primary');
+        });
+
+        $('.status-link').hover(function () {
+            $('.status-link').addClass('border border-primary');
+        }, function () {
+            $('.status-link').removeClass('border border-primary');
+        });
+
+        $('.status-link').click(function() {
             window.location = 'status.html';
         });
-        $('#origin-link').click(function() {
+        $('.origin-link').click(function() {
             window.location = 'origin.html';
         });
-        $('#earth-link').click(function() {
+        $('.earth-link').click(function() {
             window.location = 'earth.html';
         });
 
@@ -296,6 +315,8 @@
         changesize_text('huge-title', 20);
         changesize_text('content-sheet-title', 40);
         changesize_text('title-sheet', 50);
+        changesize_text('card-title',70);
+        changesize_text('card-abstract', 90);
         
         changesize_pic('drop', 50);
         changesize_pic('icon-menu-content', 30);
