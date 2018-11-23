@@ -474,8 +474,10 @@
 
 .index-logo,
 .logo,
-.menu-drop,
-.menu-hand
+.menu-drop-grey,
+.menu-drop-blue,
+.menu-drop-deep,
+.menu-drop-yellow
 {
     background-repeat: no-repeat;
     background-position: center;
@@ -492,15 +494,25 @@
     background-size: 75%;
 }
 
-.menu-drop
+.menu-drop-grey
 {
     background-image: url(../images/drop-grey.png);
     background-size: 75%;
 }
-.menu-hand
+.menu-drop-blue
 {
-    background-image: url(../images/little-hand.png);
-    background-size: 100%;
+    background-image: url(../images/drop-blue.png);
+    background-size: 75%;
+}
+.menu-drop-deep
+{
+    background-image: url(../images/drop-blue-deep.png);
+    background-size: 75%;
+}
+.menu-drop-yellow
+{
+    background-image: url(../images/drop-yellow.png);
+    background-size: 75%;
 }
 
 .top-nav
